@@ -1,0 +1,223 @@
+<!-- 
+<div class="page-banner-area dotted-bg bg-fbecd7">
+    <div class="container">
+      <div class="page-banner-content">
+        <h1>{{ 'Contact Us' | translate }}</h1>
+        <ul class="meta">
+          <li><a routerLink="/">{{ 'Home' | translate }}</a></li>
+          <li>{{ 'Contact Us' | translate }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="shape1"><img src="assets/images/shape/shape1.png" alt="shape1"></div>
+    <div class="shape2"><img src="assets/images/shape/shape2.png" alt="shape2"></div>
+  </div>
+  
+ 
+  <div class="contact-area ptb-100 dotted-bg">
+    <div class="container">
+      <div class="contact-inner-box">
+        <div class="row m-0">
+         
+          <div class="col-lg-4 col-md-12 p-0">
+            <div class="contact-info">
+              <div class="d-table">
+                <div class="d-table-cell">
+                  <ul class="info">
+                    <li>
+                      <h4>{{ 'Address' | translate }}</h4>
+                      <span>
+                        <i class="flaticon-maps-and-flags"></i>
+                        {{ 'nyon' | translate }}
+                      </span>
+                    </li>
+                    <li>
+                      <h4>{{ 'Phone Number' | translate }}</h4>
+                      <span>
+                        <i class="flaticon-phone-call"></i>
+                        <a href="tel:(+41)78 354 09 49">{{ '+41 78 354 09 49' | translate }}</a>
+                      </span>
+                    </li>
+                    <li>
+                      <h4>{{ 'Email Us' | translate }}</h4>
+                      <span>
+                        <i class="flaticon-envelope"></i>
+                        <a href="mailto:contact&#64;hakimdev.ch">{{ 'contact@hakimdev.ch' | translate }}</a>
+                      </span>
+                    </li>
+                    <li>
+                      <h4>{{ 'Follow Us' | translate }}</h4>
+                      <ul class="social-links list-unstyled mb-0">
+                        <li><a href="#" target="_blank"><i class="flaticon-facebook-app-symbol"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="flaticon-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="flaticon-instagram"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="flaticon-linkedin"></i></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          
+          <div class="col-lg-8 col-md-12 p-0">
+            <div class="contact-form">
+              <h4>{{ 'Contact Us' | translate }}</h4>
+
+
+              <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label>{{ 'Name' | translate }}</label>
+                  <input type="text" class="form-control" formControlName="name"
+                         [placeholder]="'your name' | translate">
+                </div>
+              
+                <div class="form-group">
+                  <label>{{ 'Email Us' | translate }}</label>
+                  <input type="email" class="form-control" formControlName="email"
+                         [placeholder]="'your email' | translate">
+                </div>
+              
+                <div class="form-group">
+                  <label>{{ 'Phone Number' | translate }}</label>
+                  <input type="text" class="form-control" formControlName="phone"
+                         [placeholder]="'your Phone Number' | translate">
+                </div>
+              
+                <div class="form-group">
+                  <label>{{ 'Message' | translate }}</label>
+                  <textarea cols="30" rows="5" class="form-control" formControlName="message"
+                            [placeholder]="'your message' | translate"></textarea>
+                </div>
+              
+                <button type="submit" class="default-btn" [disabled]="form.invalid">
+                  {{ 'Send' | translate }}
+                </button>
+              </form>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!-- Page Banner -->
+<div class="page-banner-area dotted-bg bg-fbecd7">
+  <div class="container">
+    <div class="page-banner-content">
+      <h1>{{ currentLang.pageTitle }}</h1>
+      <ul class="meta">
+        <li><a routerLink="/">{{ currentLang.home }}</a></li>
+        <li>{{ currentLang.pageTitle }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="shape1"><img src="assets/images/shape/shape1.png" alt="shape1" /></div>
+  <div class="shape2"><img src="assets/images/shape/shape2.png" alt="shape2" /></div>
+</div>
+
+<!-- Contact Area -->
+<div class="contact-area ptb-100 dotted-bg">
+  <div class="container">
+    <div class="contact-inner-box">
+      <div class="row m-0">
+        <!-- Colonne infos -->
+        <div class="col-lg-4 col-md-12 p-0">
+          <div class="contact-info">
+            <div class="d-table">
+              <div class="d-table-cell">
+                <ul class="info">
+                  <li>
+                    <h4>{{ currentLang.address }}</h4>
+                    <span>
+                      <i class="flaticon-maps-and-flags"></i>
+                      {{ currentLang.addressCity }}
+                    </span>
+                  </li>
+                  <li>
+                    <h4>{{ currentLang.phone }}</h4>
+                    <span>
+                      <i class="flaticon-phone-call"></i>
+                      <a href="tel:+41783540949">{{ currentLang.phoneValue }}</a>
+                    </span>
+                  </li>
+                  <li>
+                    <h4>{{ currentLang.email }}</h4>
+                    <span>
+                      <i class="flaticon-envelope"></i>
+                      <a href="mailto:contact@hakimdev.ch">{{ currentLang.emailValue }}</a>
+                    </span>
+                  </li>
+                  <li>
+                    <h4>{{ currentLang.follow }}</h4>
+                    <ul class="social-links list-unstyled mb-0">
+                      <li><a href="https://linkedin.com/in/hakimdev" target="_blank"><i class="flaticon-linkedin"></i></a></li>
+                      <li><a href="https://github.com/hakimdev" target="_blank"><i class="flaticon-github"></i></a></li>
+                      <li><a href="https://twitter.com/hakimdev" target="_blank"><i class="flaticon-twitter"></i></a></li>
+                      <li><a href="https://instagram.com/hakimdev" target="_blank"><i class="flaticon-instagram"></i></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Colonne formulaire -->
+        <div class="col-lg-8 col-md-12 p-0">
+          <div class="contact-form">
+            <h4>{{ currentLang.contactForm }}</h4>
+
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label>{{ currentLang.nameLabel }}</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="name"
+                  [placeholder]="currentLang.namePlaceholder"
+                />
+              </div>
+
+              <div class="form-group">
+                <label>{{ currentLang.emailLabel }}</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="email"
+                  [placeholder]="currentLang.emailPlaceholder"
+                />
+              </div>
+
+              <div class="form-group">
+                <label>{{ currentLang.phoneLabel }}</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="phone"
+                  [placeholder]="currentLang.phonePlaceholder"
+                />
+              </div>
+
+              <div class="form-group">
+                <label>{{ currentLang.messageLabel }}</label>
+                <textarea
+                  cols="30"
+                  rows="5"
+                  class="form-control"
+                  formControlName="message"
+                  [placeholder]="currentLang.messagePlaceholder"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="default-btn" [disabled]="form.invalid">
+                {{ currentLang.sendBtn }}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

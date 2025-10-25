@@ -1,0 +1,295 @@
+.services-area {
+    position: relative;
+    z-index: 1;
+}
+.single-service-box {
+    border: 1px solid var(--blackColor);
+    padding: 65px 50px 65px 155px;
+    position: relative;
+    border-radius: 7px;
+
+    .icon {
+        transition: var(--transition);
+        margin-bottom: 15px;
+        position: absolute;
+        font-size: 70px;
+        line-height: 1;
+        left: 50px;
+        top: 65px;
+
+        &.main-color {
+            color: var(--primaryColor);
+        }
+    }
+    h4 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    p {
+        color: var(--blackColor);
+    }
+    .link-btn {
+        display: inline-block;
+        padding-right: 22px;
+        position: relative;
+        margin-top: 15px;
+        font: {
+            weight: 500;
+            size: 16px;
+        };
+        i {
+            top: 50%;
+            right: -5px;
+            line-height: 1;
+            transition: .3s;
+            font-size: 25px;
+            margin-top: 2.6px;
+            position: absolute;
+            color: var(--blackColor);
+            transform: translateY(-50%);
+        }
+        &:hover {
+            i {
+                transform: translateY(-50%) rotate(45deg);
+                color: var(--primaryColor);
+            }
+        }
+    }
+    &:hover {
+        .icon {
+            transform: translateY(-5px);
+            color: var(--primaryColor);
+        }
+    }
+}
+.single-service-item {
+    margin-bottom: 55px;
+
+    .icon {
+        transition: var(--transition);
+        margin-bottom: 15px;
+        font-size: 70px;
+        line-height: 1;
+    }
+    h4 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    p {
+        color: var(--blackColor);
+        max-width: 350px;
+    }
+    .link-btn {
+        display: inline-block;
+        padding-right: 22px;
+        position: relative;
+        margin-top: 15px;
+        font: {
+            weight: 500;
+            size: 16px;
+        };
+        i {
+            top: 50%;
+            right: -5px;
+            line-height: 1;
+            transition: .3s;
+            font-size: 25px;
+            margin-top: 2.6px;
+            position: absolute;
+            color: var(--blackColor);
+            transform: translateY(-50%);
+        }
+        &:hover {
+            i {
+                transform: translateY(-50%) rotate(45deg);
+                color: var(--primaryColor);
+            }
+        }
+    }
+    &:hover {
+        .icon {
+            transform: translateY(-5px);
+            color: var(--primaryColor);
+        }
+    }
+}
+.view-all-btn {
+    margin-top: 30px;
+}
+.d-none {
+    &.d-block {
+        display: block !important;
+    }
+    &.d-flex {
+        display: flex !important;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .single-service-box {
+        padding: 25px 20px;
+        border-radius: 5px;
+
+        .icon {
+            margin-bottom: 15px;
+            position: relative;
+            font-size: 40px;
+            left: 0;
+            top: 0;
+        }
+        h4 {
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+        .link-btn {
+            padding-right: 18px;
+            font-size: 13px;
+            margin-top: 0;
+
+            i {
+                font-size: 20px;
+                margin-top: 1.5px;
+            }
+        }
+    }
+    .single-service-item {
+        margin-bottom: 30px;
+    
+        .icon {
+            margin-bottom: 15px;
+            font-size: 40px;
+        }
+        h4 {
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+        p {
+            max-width: 100%;
+        }
+        .link-btn {
+            padding-right: 18px;
+            font-size: 13px;
+            margin-top: 0;
+
+            i {
+                font-size: 20px;
+                margin-top: 1.5px;
+            }
+        }
+    }
+    .view-all-btn {
+        margin-top: 10px;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .single-service-box {
+        padding: 25px 20px;
+
+        .icon {
+            margin-bottom: 15px;
+            position: relative;
+            font-size: 50px;
+            left: 0;
+            top: 0;
+        }
+        h4 {
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+        .link-btn {
+            padding-right: 20px;
+            font-size: 14px;
+            margin-top: 0;
+
+            i {
+                font-size: 20px;
+                margin-top: 2px;
+            }
+        }
+    }
+    .single-service-item {
+        margin-bottom: 35px;
+    
+        .icon {
+            font-size: 50px;
+        }
+        h4 {
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+        p {
+            max-width: 100%;
+        }
+        .link-btn {
+            padding-right: 20px;
+            font-size: 14px;
+            margin-top: 0;
+
+            i {
+                font-size: 20px;
+                margin-top: 2px;
+            }
+        }
+    }
+    .view-all-btn {
+        margin-top: 15px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .single-service-box {
+        padding: 35px 25px 35px 115px;
+
+        .icon {
+            font-size: 60px;
+            left: 25px;
+            top: 35px;
+        }
+        h4 {
+            font-size: 21px;
+        }
+        .link-btn {
+            font-size: 15px;
+            margin-top: 5px;
+        }
+    }
+    .single-service-item {
+        margin-bottom: 45px;
+    
+        .icon {
+            font-size: 60px;
+        }
+        h4 {
+            font-size: 21px;
+        }
+        p {
+            max-width: 100%;
+        }
+        .link-btn {
+            font-size: 15px;
+            margin-top: 5px;
+        }
+    }
+    .view-all-btn {
+        margin-top: 20px;
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

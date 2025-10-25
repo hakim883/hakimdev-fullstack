@@ -1,0 +1,76 @@
+
+  <!-- Page Banner -->
+<div class="page-banner-area dotted-bg bg-fbecd7">
+  <div class="container">
+    <div class="page-banner-content">
+      <h1>{{ currentLang.pageTitle }}</h1>
+      <ul class="meta">
+        <li><a routerLink="/">{{ currentLang.home }}</a></li>
+        <li>{{ currentLang.auth }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="shape1"><img src="assets/images/shape/shape1.png" alt="shape1" /></div>
+  <div class="shape2"><img src="assets/images/shape/shape2.png" alt="shape2" /></div>
+</div>
+
+<!-- Profile Authentication -->
+<div class="profile-authentication-area ptb-100">
+  <div class="container">
+    <!-- LOGIN -->
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-12" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
+        <div class="login-form">
+          <h2>{{ currentLang.loginTitle }}</h2>
+          <form (ngSubmit)="login()">
+            <div class="form-group">
+              <label>{{ currentLang.emailLabel }}</label>
+              <input type="email" class="form-control" [(ngModel)]="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label>{{ currentLang.passwordLabel }}</label>
+              <input type="password" class="form-control" [(ngModel)]="password" name="password" required />
+            </div>
+            <button type="submit" class="default-btn">{{ currentLang.loginBtn }}</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">
+        <div class="login-image text-center">
+          <img src="assets/images/login.gif" alt="login-image" />
+        </div>
+      </div>
+    </div>
+
+    <div class="ptb-100"><hr /></div>
+
+    <!-- REGISTER -->
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-12" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
+        <div class="register-image text-center">
+          <img src="assets/images/register.gif" alt="register-image" />
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">
+        <div class="register-form">
+          <h2>{{ currentLang.registerTitle }}</h2>
+          <form (ngSubmit)="register()">
+            <div class="form-group">
+              <label>{{ currentLang.usernameLabel }}</label>
+              <input type="text" class="form-control" [(ngModel)]="username" name="username" required />
+            </div>
+            <div class="form-group">
+              <label>{{ currentLang.emailLabel }}</label>
+              <input type="email" class="form-control" [(ngModel)]="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label>{{ currentLang.passwordLabel }}</label>
+              <input type="password" class="form-control" [(ngModel)]="password" name="password" required />
+            </div>
+            <button type="submit" class="default-btn">{{ currentLang.registerBtn }}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

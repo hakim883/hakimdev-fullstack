@@ -1,0 +1,67 @@
+<!-- <div
+    class="feedback-area bg-color dotted-bg bg-fbecd7"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3' || router.url === '/index-4'}"
+>
+   
+    <section class="feedback-area">
+        <div class="container">
+          <div class="feedback-inner-box dotted-bg bg-f4d9d3">
+            <owl-carousel-o [options]="feedbackSlides">
+              <ng-template carouselSlide>
+                <i class="flaticon-quotes"></i>
+                <p>
+                  « Grâce à son expertise Angular + Spring Boot, Abdelhakim a livré une plateforme rapide et fiable pour notre start-up. »
+                </p>
+                <div class="client-info">
+                  <h4>Sarah L.</h4>
+                  <span>CEO • FinTech Geneva</span>
+                </div>
+              </ng-template>
+      
+              <ng-template carouselSlide>
+                <i class="flaticon-quotes"></i>
+                <p>
+                  « Formation WordPress très claire. J’ai pu lancer mon site e-commerce en 1 semaine sans bug. »
+                </p>
+                <div class="client-info">
+                  <h4>Mehdi B.</h4>
+                  <span>Freelancer • Lausanne</span>
+                </div>
+              </ng-template>
+      
+              <ng-template carouselSlide>
+                <i class="flaticon-quotes"></i>
+                <p>
+                  « API REST sécurisée et multilingue, mise en prod en 3 jours. Professionnel et réactif. »
+                </p>
+                <div class="client-info">
+                  <h4>David R.</h4>
+                  <span>CTO • Agence Digitale Nyon</span>
+                </div>
+              </ng-template>
+            </owl-carousel-o>
+          </div>
+        </div>
+      </section>
+</div> -->
+<div
+  class="feedback-area bg-color dotted-bg bg-fbecd7"
+  [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3' || router.url === '/index-4'}"
+>
+  <section class="feedback-area">
+    <div class="container">
+      <div class="feedback-inner-box dotted-bg bg-f4d9d3">
+        <owl-carousel-o [options]="feedbackSlides">
+          <ng-template carouselSlide *ngFor="let slide of currentLang.slides">
+            <i class="flaticon-quotes"></i>
+            <p>{{ slide.quote }}</p>
+            <div class="client-info">
+              <h4>{{ slide.name }}</h4>
+              <span>{{ slide.role }}</span>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </section>
+</div>

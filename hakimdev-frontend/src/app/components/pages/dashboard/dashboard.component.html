@@ -1,0 +1,66 @@
+<!-- <p>dashboard works!</p> -->
+<!-- Dashboard banner -->
+<div class="page-banner-area dotted-bg bg-fbecd7">
+    <div class="container">
+      <div class="page-banner-content">
+        <h1>{{ currentLang.pageTitle }}</h1>
+        <ul class="meta">
+          <li><a routerLink="/">{{ currentLang.home }}</a></li>
+          <li>{{ currentLang.pageTitle }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Contenu du tableau de bord -->
+  <div class="dashboard-area ptb-100 dotted-bg">
+    <div class="container">
+      <div class="row">
+        <!-- Carte de bienvenue -->
+        <div class="col-lg-12 mb-4">
+          <div class="dashboard-card welcome-card">
+            <h2>{{ currentLang.welcome }}</h2>
+            <p>{{ currentLang.subtitle }}</p>
+          </div>
+        </div>
+  
+        <!-- Statistiques rapides -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="stat-card">
+            <i class="flaticon-project"></i>
+            <h3>{{ currentLang.projects }}</h3>
+            <span>8</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="stat-card">
+            <i class="flaticon-customer"></i>
+            <h3>{{ currentLang.clients }}</h3>
+            <span>24</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="stat-card">
+            <i class="flaticon-email"></i>
+            <h3>{{ currentLang.messages }}</h3>
+            <span>12</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="stat-card">
+            <i class="flaticon-revenue"></i>
+            <h3>{{ currentLang.revenue }}</h3>
+            <span>CHF 12 350</span>
+          </div>
+        </div>
+  
+        <!-- Bouton d’action rapide -->
+        <div class="col-lg-12 text-center mt-4">
+          <a routerLink="/contact" class="default-btn">
+            {{ currentLang.addProject }}
+            <i class="flaticon-right-up"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,23 @@
+<div class="chat-container">
+  <div class="users-list">
+    <h3>👥 Utilisateurs</h3>
+    <ul>
+      <li *ngFor="let user of users">
+        <span [style.color]="user.online ? 'green' : 'black'">●</span>
+        {{ user.username }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="chat-box">
+    <h3>💬 Discussion</h3>
+    <ul>
+      <li *ngFor="let msg of messages">
+        <strong>{{ msg.sender }}</strong> : {{ msg.content }}
+      </li>
+    </ul>
+
+    <input [(ngModel)]="message" placeholder="Tape ton message..." />
+    <button (click)="sendMessage()">Envoyer</button>
+  </div>
+</div>

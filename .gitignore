@@ -1,0 +1,14 @@
+# Backend
+/target
+/application.properties
+/application.yml
+
+# Frontend
+/node_modules
+/dist
+/.angular
+
+# System
+.DS_Store
+.idea/
+.vscode/

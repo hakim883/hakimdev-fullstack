@@ -1,0 +1,116 @@
+{
+  "about": {
+    "subtitle": "نبذة عني",
+    "title": "عبد الحكيم شعباني - مطور Full-Stack",
+    "description": "متواجد في سويسرا الروماندية، أبني تطبيقات ويب حديثة باستخدام Angular، Spring Boot و WordPress. متاح للمشاريع والتدريب.",
+    "feature1": {
+      "title": "خبرة Full-Stack",
+      "description": "Angular، Spring Boot، MySQL – تطبيقات قوية وقابلة للتوسع."
+    },
+    "feature2": {
+      "title": "تدريب ودعم",
+      "description": "دورات مخصصة، دعم 24/7 وصيانة مستمرة."
+    },
+    "btn": "اتصل بي"
+  },
+  
+    "NAV": { "HOME": "Startseite" },
+    "BLOG": {
+      "TITLE": "Blog-Raster",
+      "GRID": "Raster",
+      "READ_MORE": "Weiterlesen",
+      "DEFAULT_TITLE": "Das Meta Pro ist kein Flop – ganz im Gegenteil",
+      "DEFAULT_EXCERPT": "Entdecke, warum das Meta Pro deine Arbeitsweise revolutionieren kann."
+    },
+    
+    
+      "NAV": { "HOME": "الرئيسية" },
+      "COURSE": {
+        "TITLE": "الدورات",
+        "GRID": "جميع الدورات",
+        "DEFAULT_TITLE": "دورة بدون عنوان",
+        "DEFAULT_DESCRIPTION": "لا توجد وصف متاح.",
+        "DOWNLOAD": "تحميل",
+        "LOGIN_REQUIRED": "يرجى تسجيل الدخول للتحميل."
+      
+    },
+    
+      "NAV": { "HOME": "الرئيسية" },
+      "PROJECTS": {
+        "TITLE": "أحدث المشاريع",
+        "GRID": "المشاريع",
+        "DEFAULT_TITLE": "مشروع بدون عنوان",
+        "DEFAULT_DESCRIPTION": "لا توجد وصف متاح.",
+        "DOWNLOAD": "تحميل المشروع",
+        "LOGIN_REQUIRED": "يرجى تسجيل الدخول للتحميل."
+      },
+      
+        "NAV": { "HOME": "الرئيسية" },
+        "SERVICES": {
+          "TITLE": "الخدمات",
+          "GRID": "جميع الخدمات",
+          "DEFAULT_NAME": "اسم الخدمة",
+          "DEFAULT_DESCRIPTION": "لا توجد وصف متاح.",
+          "VIEW_MORE": "عرض المزيد"
+        },
+        
+          "EXPERTISE": {
+            "SUB_TITLE": "خبرتنا",
+            "HEADING": "أعطنا فكرة يرغب الناس في قضاء الوقت معها",
+            "DESCRIPTION": "Lorem ipsum dolor sit amet consectetur. Rutrum pretium pulvinar ut nec. Ac consequat blandit gravida turpis a risus pharetra amet molestie.",
+            "FEATURE1_TITLE": "عزز مبيعاتك",
+            "FEATURE1_DESC": "Lorem ipsum dolor sit amet consectetur. Rutrum pretium pulvinar ut nec. Ac consequat blandit gravida turpis a risus pharetra amet molestie.",
+            "FEATURE2_TITLE": "فكرة وتحليل",
+            "FEATURE2_DESC": "Lorem ipsum dolor sit amet consectetur. Rutrum pretium pulvinar ut nec. Ac consequat blandit gravida turpis a risus pharetra amet molestie."
+          },
+          
+            "FAQ": {
+              "TITLE": "الأسئلة الشائعة",
+              "Q1_TITLE": "ما هي ثقافة الشركة؟",
+              "Q1_CONTENT": "يجب أن أشرح لك كيف وُلدت هذه الفكرة الخاطئة في شجب المتعة ومدح الألم، وسأقدم لك تقريرًا كاملاً عن النظام.",
+              "Q2_TITLE": "أي سوق تستهدفه الشركة الناشئة؟",
+              "Q2_CONTENT": "يجب أن أشرح لك كيف وُلدت هذه الفكرة الخاطئة في شجب المتعة ومدح الألم، وسأقدم لك تقريرًا كاملاً عن النظام.",
+              "Q3_TITLE": "ما هو مسار الإقلاع للعمل؟",
+              "Q3_CONTENT": "يجب أن أشرح لك كيف وُلدت هذه الفكرة الخاطئة في شجب المتعة ومدح الألم، وسأقدم لك تقريرًا كاملاً عن النظام.",
+              "Q4_TITLE": "من هم المستثمرون في الشركة؟",
+              "Q4_CONTENT": "يجب أن أشرح لك كيف وُلدت هذه الفكرة الخاطئة في شجب المتعة ومدح الألم، وسأقدم لك تقريرًا كاملاً عن النظام.",
+              "Q5_TITLE": "كيف تسأل عن عملك؟",
+              "Q5_CONTENT": "يجب أن أشرح لك كيف وُلدت هذه الفكرة الخاطئة في شجب المتعة ومدح الألم، وسأقدم لك تقريرًا كاملاً عن النظام."
+            },
+            
+              "FEATURES": {
+                "SUB_TITLE": "نقاط قوتي",
+                "TOP_TITLE1": "Full-Stack Pro",
+                "TOP_DESC1": "Angular، Spring Boot، MySQL – حلول قوية وقابلة للتوسع.",
+                "TOP_TITLE2": "متعدد اللغات",
+                "TOP_DESC2": "فرنسية C1، إنجليزية B2، عربية أم – تواصل سلس.",
+                "TOP_TITLE3": "متاح",
+                "TOP_DESC3": "متواجد في سويسرا الروماندية – مشروعات فورية ودورات تدريبية.",
+                "FEATURE1_TITLE": "هندسة المنتج",
+                "FEATURE1_DESC": "Lorem ipsum dolor sit amet consectetur ut. Rutrum pretium pulvinar ut nec. Ato sits consequat blandit gravida.",
+                "FEATURE2_TITLE": "UX/UI Design",
+                "FEATURE2_DESC": "Lorem ipsum dolor sit amet consectetur ut. Rutrum pretium pulvinar ut nec. Ato sits consequat blandit gravida.",
+                "FEATURE3_TITLE": "Big Data & Analytics",
+                "FEATURE3_DESC": "Lorem ipsum dolor sit amet consectetur ut. Rutrum pretium pulvinar ut nec. Ato sits consequat blandit gravida.",
+                "VIEW_MORE": "عرض المزيد"
+              },
+              
+                "FUNFACTS": {
+                  "PROJECTS_COUNT": "1500+",
+                  "PROJECTS_LABEL": "مشاريع مكتملة",
+                  "CLIENTS_COUNT": "700+",
+                  "CLIENTS_LABEL": "عملاء سعداء",
+                  "REVIEWS_COUNT": "1275+",
+                  "REVIEWS_LABEL": "تقييمات إيجابية",
+                  "AWARDS_COUNT": "250+",
+                  "AWARDS_LABEL": "جوائز فازت"
+                }
+              
+            
+          
+        
+      
+    
+    
+  
+}

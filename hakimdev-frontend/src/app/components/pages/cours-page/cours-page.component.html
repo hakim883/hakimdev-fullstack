@@ -1,0 +1,182 @@
+
+
+<div class="page-banner-area dotted-bg bg-fbecd7">
+  <div class="container">
+    <div class="page-banner-content">
+      <h1>{{ currentLang.pageTitle }}</h1>
+      <ul class="meta">
+        <li><a routerLink="/">{{ currentLang.home }}</a></li>
+        <li>{{ currentLang.pageTitle }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="shape1"><img src="assets/images/shape/shape1.png" alt="shape1" /></div>
+  <div class="shape2"><img src="assets/images/shape/shape2.png" alt="shape2" /></div>
+</div>
+
+
+
+
+<div class="courses-area ptb-100 dotted-bg">
+  <div *ngIf="!isLoggedIn" class="alert alert-warning text-center">
+    <strong>⚠️ {{ currentLang.pageTitle }}</strong><br>
+    Vous devez <a routerLink="/login">vous connecter</a> ou 
+    <a routerLink="/register">créer un compte</a> pour voir les contenus.
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+     
+
+          <div class="cours-list">
+            <div *ngIf="isLoggedIn">
+              <!-- <div class="row"> -->
+              <div class="cours-card" *ngFor="let c of pagedCours; trackBy: trackById">
+
+              <div class="media-container">
+                <img *ngIf="c.image" [src]="getImageSrc(c.image)" alt="{{c.title}}">
+                <video *ngIf="c.video" controls>
+                  <source [src]="getVideoSrc(c.video)" type="video/mp4">
+                </video>
+              </div>
+          
+              <div class="content">
+                <div class="date">{{c.day}} {{c.month}}</div>
+                <h3>{{c.title}}</h3>
+                <p>{{c.description}}</p>
+                <a class="download" (click)="download(c.id)">
+                  {{currentLang.download}} ↗
+                </a>
+                <h3>{{c.title}} 
+                </h3>
+
+                <button class="btn btn-sm like-btn me-2" (click)="toggleLike(c.id)">
+                  <span [class.liked]="c.liked" aria-hidden="true">{{ c.liked ? '❤️' : '🤍' }}</span>
+                </button>
+                <span class="small">{{ c.likeCount || 0 }}</span>
+                
+                <div class="comments">
+                  <textarea
+                  [(ngModel)]="newComment[c.id]"
+                  class="form-control form-control-sm mb-2"
+                  rows="2"
+                  placeholder="Écrire un commentaire..."></textarea>
+                
+                <div class="d-flex justify-content-end">
+                  <button class="btn btn-sm btn-primary"
+                          [disabled]="!newComment[c.id]?.trim()"
+                          (click)="addComment(c.id)">
+                    Envoyer
+                  </button>
+                </div>
+                
+
+
+                  <div *ngFor="let com of c.comments">
+                    <strong>{{com.user}}:</strong> {{com.texte}}
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          </div>
+
+        
+
+    <div class="pagination text-center mt-4">
+      <button
+        class="btn btn-outline-dark me-2"
+        (click)="prevPage()"
+        [disabled]="currentPage === 1"
+      >
+        ←
+      </button>
+      <span>{{ currentPage }} / {{ totalPages }}</span>
+      <button
+        class="btn btn-outline-dark ms-2"
+        (click)="nextPage()"
+        [disabled]="currentPage === totalPages"
+      >
+        →
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="page-banner-area dotted-bg bg-fbecd7">
+  <div class="container">
+    <div class="page-banner-content">
+      <h1>{{ currentLang.pageTitle }}</h1>
+      <ul class="meta">
+        <li><a routerLink="/">{{ currentLang.home }}</a></li>
+        <li>{{ currentLang.pageTitle }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="courses-area ptb-100 dotted-bg">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="cours-list">
+        <div class="cours-card" *ngFor="let c of pagedCours(); trackBy: trackById">
+          <div class="media-container">
+            <img *ngIf="c.image" [src]="getImageSrc(c.image)" alt="{{c.title}}">
+          </div>
+          
+          <div class="content">
+            <div class="date">{{c.day}} {{c.month}}</div>
+            <h3>{{c.title}}</h3>
+            <p>{{c.description}}</p>
+            <a class="download" (click)="download(c.id)">{{currentLang.download}} ↗</a>
+
+            <button class="btn btn-sm like-btn me-2" (click)="toggleLike(c.id)">
+              <span [class.liked]="c.liked">{{ c.liked ? '❤️' : '🤍' }}</span>
+            </button>
+            <span class="small">{{ c.likeCount || 0 }}</span>
+
+            <div class="comments mt-2">
+              <textarea [(ngModel)]="newComment[c.id]" class="form-control mb-2" rows="2" placeholder="Écrire un commentaire..."></textarea>
+              <button class="btn btn-sm btn-primary" [disabled]="!newComment[c.id]?.trim()" (click)="addComment(c.id)">Envoyer</button>
+
+              <div *ngFor="let com of c.comments">
+                <strong>{{com.user}}:</strong> {{com.texte}}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+   
+    <div class="pagination text-center mt-4">
+      <button class="btn btn-outline-dark me-2" (click)="prevPage()" [disabled]="currentPage === 1">←</button>
+      <span>{{ currentPage }} / {{ totalPages }}</span>
+      <button class="btn btn-outline-dark ms-2" (click)="nextPage()" [disabled]="currentPage === totalPages">→</button>
+    </div>
+  </div>
+</div> -->

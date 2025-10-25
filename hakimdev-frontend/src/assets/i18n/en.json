@@ -1,0 +1,114 @@
+{
+  "about": {
+    "subtitle": "ABOUT",
+    "title": "Abdelhakim Chaabani - Full-Stack Developer",
+    "description": "Based in Romandy Switzerland, I build modern web apps with Angular, Spring Boot and WordPress. Available for projects and training.",
+    "feature1": {
+      "title": "Full-Stack Expertise",
+      "description": "Angular, Spring Boot, MySQL – robust and scalable applications."
+    },
+    "feature2": {
+      "title": "Training & Support",
+      "description": "Personalized courses, 24/7 support and continuous maintenance."
+    },
+    "btn": "Contact me"
+  },
+  "NAV": { "HOME": "Home" },
+  "BLOG": {
+    "TITLE": "Blog Grid",
+    "GRID": "Blog Grid",
+    "READ_MORE": "Read More",
+    "DEFAULT_TITLE": "The Meta Pro is not the big fail it's made out to be",
+    "DEFAULT_EXCERPT": "Lorem ipsum dolor sit amet consectetur ut. Rutrum pretium pulvinar ut nec. Ato sits consequat blandit gravida."
+  },
+  
+  
+    "NAV": { "HOME": "Home" },
+    "COURSE": {
+      "TITLE": "Courses",
+      "GRID": "All Courses",
+      "DEFAULT_TITLE": "Untitled Course",
+      "DEFAULT_DESCRIPTION": "No description available.",
+      "DOWNLOAD": "Download",
+      "LOGIN_REQUIRED": "Please log in to download."
+    
+  },
+  
+    "NAV": { "HOME": "Home" },
+    "PROJECTS": {
+      "TITLE": "Recent Projects",
+      "GRID": "Projects",
+      "DEFAULT_TITLE": "Untitled Project",
+      "DEFAULT_DESCRIPTION": "No description available.",
+      "DOWNLOAD": "Download Project",
+      "LOGIN_REQUIRED": "Please log in to download."
+    },
+    
+      "NAV": { "HOME": "Home" },
+      "SERVICES": {
+        "TITLE": "Services",
+        "GRID": "All Services",
+        "DEFAULT_NAME": "Service Name",
+        "DEFAULT_DESCRIPTION": "No description available.",
+        "VIEW_MORE": "View More"
+      },
+      
+        "EXPERTISE": {
+          "SUB_TITLE": "OUR EXPERTISE",
+          "HEADING": "Give us an idea that people want to spend time with",
+          "DESCRIPTION": "Lorem ipsum dolor sit amet consectetur. Rutrum pretium pulvinar ut nec. Ac consequat blandit gravida turpis a risus pharetra amet molestie eget.",
+          "FEATURE1_TITLE": "Boost Your Sale",
+          "FEATURE1_DESC": "Lorem ipsum dolor sit amet consectetur. Rutrum pretium pulvinar ut nec. Ac consequat blandit gravida turpis a risus pharetra amet molestie.",
+          "FEATURE2_TITLE": "Idea & Analysis",
+          "FEATURE2_DESC": "Lorem ipsum dolor sit amet consectetur. Rutrum pretium pulvinar ut nec. Ac consequat blandit gravida turpis a risus pharetra amet molestie."
+        },
+        
+          "FAQ": {
+            "TITLE": "Frequently Asked Questions",
+            "Q1_TITLE": "What is the company culture?",
+            "Q1_CONTENT": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound.",
+            "Q2_TITLE": "Which market is the startup targeting?",
+            "Q2_CONTENT": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound.",
+            "Q3_TITLE": "What is the runway of the business?",
+            "Q3_CONTENT": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound.",
+            "Q4_TITLE": "Who are the investors in the company?",
+            "Q4_CONTENT": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound.",
+            "Q5_TITLE": "How do you ask about your business?",
+            "Q5_CONTENT": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound."
+          },
+          
+            "FEATURES": {
+              "SUB_TITLE": "My Strengths",
+              "TOP_TITLE1": "Full-Stack Pro",
+              "TOP_DESC1": "Angular, Spring Boot, MySQL – robust and scalable solutions.",
+              "TOP_TITLE2": "Multilingual",
+              "TOP_DESC2": "French C1, English B2, Arabic native – fluent communication.",
+              "TOP_TITLE3": "Available",
+              "TOP_DESC3": "Based in Romandy Switzerland – immediate projects & training.",
+              "FEATURE1_TITLE": "Product Engineering",
+              "FEATURE1_DESC": "Lorem ipsum dolor sit amet consectetur ut. Rutrum pretium pulvinar ut nec. Ato sits consequat blandit gravida.",
+              "FEATURE2_TITLE": "UX/UI Design",
+              "FEATURE2_DESC": "Lorem ipsum dolor sit amet consectetur ut. Rutrum pretium pulvinar ut nec. Ato sits consequat blandit gravida.",
+              "FEATURE3_TITLE": "Big Data & Analytics",
+              "FEATURE3_DESC": "Lorem ipsum dolor sit amet consectetur ut. Rutrum pretium pulvinar ut nec. Ato sits consequat blandit gravida.",
+              "VIEW_MORE": "View More"
+            },
+            
+              "FUNFACTS": {
+                "PROJECTS_COUNT": "1500+",
+                "PROJECTS_LABEL": "Completed Projects",
+                "CLIENTS_COUNT": "700+",
+                "CLIENTS_LABEL": "Happy Clients",
+                "REVIEWS_COUNT": "1275+",
+                "REVIEWS_LABEL": "Positive Reviews",
+                "AWARDS_COUNT": "250+",
+                "AWARDS_LABEL": "Awards Won"
+              }
+            
+          
+        
+      
+    
+  
+  
+}

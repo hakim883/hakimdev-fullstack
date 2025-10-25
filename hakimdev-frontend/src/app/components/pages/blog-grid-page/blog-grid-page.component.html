@@ -1,0 +1,98 @@
+ <!-- <div class="content">
+              <div class="date">
+                {{ a.day }} <span>{{ a.month }}</span>
+              </div>
+              <h4>
+                <a routerLink="/blog-details">{{ a.title ||a.description || a.contenu || currentLang.defaultTitle }}</a>
+              </h4>
+              <p class="excerpt">{{ (a.description || a.contenu || currentLang.defaultExcerpt) | slice:0:100 }}…</p>
+              <a routerLink="/blog-details" class="link-btn">
+                {{ currentLang.readMore }} <i class="flaticon-right-up"></i>
+              </a>
+            </div> -->
+<!-- Page Banner -->
+<div class="page-banner-area dotted-bg bg-fbecd7">
+    <div class="container">
+      <div class="page-banner-content">
+        <h1>{{ currentLang.pageTitle }}</h1>
+        <ul class="meta">
+          <li><a routerLink="/">{{ currentLang.home }}</a></li>
+          <li>{{ currentLang.pageTitle }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="shape1"><img src="assets/images/shape/shape1.png" alt="shape1" /></div>
+    <div class="shape2"><img src="assets/images/shape/shape2.png" alt="shape2" /></div>
+  </div>
+  
+  <!-- Blog Grid -->
+  <div class="blog-area ptb-100 dotted-bg">
+    <div *ngIf="!isLoggedIn" class="alert alert-warning text-center">
+      <strong>⚠️ {{ currentLang.pageTitle }}</strong><br>
+      Vous devez <a routerLink="/login">vous connecter</a> ou 
+      <a routerLink="/register">créer un compte</a> pour voir les contenus.
+    </div>
+    <div class="container">
+
+      <div class="row justify-content-center">
+
+        
+
+
+
+    
+
+
+  <!-- Articles dynamiques -->
+<div class="col-lg-4 col-md-6" *ngFor="let a of pagedArticles">
+  <div class="single-blog-post mb-25">
+    <a routerLink="/blog-details" class="image d-block">
+      <img [src]="getImageSrc(a.image)" [alt]="a.title" />
+    </a>
+
+    <div class="content">
+      <div class="date">
+        {{ a.day }} <span>{{ a.month }}</span>
+      </div>
+      <h4>
+        <a routerLink="/blog-details">{{ a.title || currentLang.defaultTitle }}</a>
+      </h4>
+
+      <p class="excerpt" [class.expanded]="a.showFull">
+        {{ a.description || currentLang.defaultExcerpt }}
+      </p>
+
+      <a (click)="a.showFull = !a.showFull" class="link-btn">
+        {{ a.showFull ? 'Réduire' : currentLang.readMore }}
+        <i class="flaticon-right-up"></i>
+      </a>
+      <!-- <a (click)="readMore(a)" class="link-btn">
+        {{ currentLang.readMore }}
+        <i class="flaticon-right-up"></i>
+      </a> -->
+      
+    
+    </div>
+  </div>
+</div>
+
+<!-- Pagination -->
+<nav class="pagination-area" *ngIf="totalPages > 1">
+  <ul class="pagination">
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <a class="page-link" (click)="prevPage()">
+        <i class="flaticon-chevron-1"></i>
+      </a>
+    </li>
+
+    <li class="page-item" *ngFor="let p of pages" [class.active]="p === currentPage">
+      <a class="page-link" (click)="goToPage(p)">{{ p }}</a>
+    </li>
+
+    <li class="page-item" [class.disabled]="currentPage === totalPages">
+      <a class="page-link" (click)="nextPage()">
+        <i class="flaticon-chevron"></i>
+      </a>
+    </li>
+  </ul>
+</nav>

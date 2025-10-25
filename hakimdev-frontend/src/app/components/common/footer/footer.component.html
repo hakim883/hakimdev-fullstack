@@ -1,0 +1,156 @@
+<!-- <footer class="footer-area pt-100 pb-75 bg-black">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-lg-3 col-sm-6">
+          <div class="single-footer-widget mb-25">
+            <a routerLink="/" class="logo d-inline-block">
+              <img src="assets/images/67975aef-e425-4be3-bd67-1522d0792c43.png" alt="HDev">
+            </a>
+            <p>
+              Développeur Full-Stack basé en Suisse Romande.<br>
+              Angular • Spring Boot • WordPress • Formation
+            </p>
+            <ul class="social-links list-unstyled mb-0">
+              <li><a href="https://linkedin.com/in/abdelhakim-chaabani" target="_blank"><i class="flaticon-linkedin-1"></i></a></li>
+              <li><a href="https://github.com/hakimdev" target="_blank"><i class="flaticon-github"></i></a></li>
+              <li><a href="mailto:hakimchaabani6@gmail.com"><i class="bx bx-envelope"></i></a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-sm-6 ps-xl-5">
+          <div class="single-footer-widget mb-25">
+            <h4>Liens rapides</h4>
+            <ul class="custom-links">
+              <li><a routerLink="/">Accueil</a></li>
+              <li><a routerLink="/projets">Projets</a></li>
+              <li><a routerLink="/cours">Cours</a></li>
+              <li><a routerLink="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-sm-6">
+          <div class="single-footer-widget mb-25">
+            <h4>Services</h4>
+            <ul class="custom-links">
+              <li><a routerLink="/services/formation">Formation</a></li>
+              <li><a routerLink="/services/projet">Développement web</a></li>
+              <li><a routerLink="/services/coaching">Coaching</a></li>
+              <li><a routerLink="/privacy-policy">Politique de confidentialité</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-sm-6">
+          <div class="single-footer-widget mb-25">
+            <h4>Contactez-moi</h4>
+            <ul class="footer-contact-info">
+              <li><i class="bx bx-envelope"></i><a href="mailto:contact@hakimdev.ch">contact&#64;hakimdev.ch</a></li>
+              <li><i class="bx bx-phone-call"></i><a href="tel:+41779695260">+41 78 354 09 49</a></li>
+              <li><i class="bx bx-map"></i>1260 Nyon, Suisse Romande</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<div class="copyright-area text-center">
+    <div class="container">
+        <p>© hakimdev.ch is Proudly Owned by <a href="https://www.linkedin.com/in/chaabani-abdelhakim-964a791b6/" target="_blank">Abdelhakim Chaabani</a></p>
+    </div>
+</div> -->
+<footer class="footer-area pt-100 pb-75 bg-black">
+    <div class="container">
+      <div class="row justify-content-center">
+  
+        <!-- Logo + description -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="single-footer-widget mb-25">
+            <a routerLink="/" class="logo d-inline-block">
+              <img src="assets/images/67975aef-e425-4be3-bd67-1522d0792c43.png" alt="HDev">
+            </a>
+            <p>{{ currentLang.desc }}</p>
+            <ul class="social-links list-unstyled mb-0">
+              <li>
+                <a href="https://linkedin.com/in/abdelhakim-chaabani" target="_blank" rel="noopener">
+                  <i class="flaticon-linkedin-1"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/hakimdev" target="_blank" rel="noopener">
+                  <i class="flaticon-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:hakimchaabani6@gmail.com">
+                  <i class="bx bx-envelope"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Liens rapides -->
+        <div class="col-lg-3 col-sm-6 ps-xl-5">
+          <div class="single-footer-widget mb-25">
+            <h4>{{ currentLang.quickLinks }}</h4>
+            <ul class="custom-links">
+              <li><a routerLink="/">{{ currentLang.home }}</a></li>
+              <li><a routerLink="/projets">{{ currentLang.projects }}</a></li>
+              <li><a routerLink="/cours">{{ currentLang.courses }}</a></li>
+              <li><a routerLink="/contact">{{ currentLang.contact }}</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Services -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="single-footer-widget mb-25">
+            <h4>{{ currentLang.services }}</h4>
+            <ul class="custom-links">
+              <li><a routerLink="/services/formation">{{ currentLang.training }}</a></li>
+              <li><a routerLink="/services/projet">{{ currentLang.webDev }}</a></li>
+              <li><a routerLink="/services/coaching">{{ currentLang.coaching }}</a></li>
+              <li><a routerLink="/privacy-policy">{{ currentLang.policy }}</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Contact -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="single-footer-widget mb-25">
+            <h4>{{ currentLang.contactMe }}</h4>
+            <ul class="footer-contact-info">
+              <li>
+                <i class="bx bx-envelope"></i>
+                <a href="mailto:contact@hakimdev.ch">contact&#64;hakimdev.ch</a>
+              </li>
+              <li>
+                <i class="bx bx-phone-call"></i>
+                <a href="tel:+41783540949">+41 78 354 09 49</a>
+              </li>
+              <li>
+                <i class="bx bx-map"></i>1260 Nyon, {{ currentLang.country }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Copyright -->
+  <div class="copyright-area text-center">
+    <div class="container">
+      <p>
+        © {{ year }} hakimdev.ch – {{ currentLang.owner }}
+        <a href="https://www.linkedin.com/in/chaabani-abdelhakim-964a791b6/"
+           target="_blank" rel="noopener">
+          Abdelhakim Chaabani
+        </a>
+      </p>
+    </div>
+  </div>

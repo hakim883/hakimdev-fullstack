@@ -1,0 +1,23 @@
+// .chat-container {
+//     max-width: 500px;
+//     margin: auto;
+//     border: 1px solid #ccc;
+//     border-radius: 8px;
+//     padding: 1rem;
+//     background: #f9f9f9;
+//   }
+//   .chat-message {
+//     margin-bottom: 0.5rem;
+//   }
+//   input {
+//     width: 75%;
+//     margin-right: 0.5rem;
+//   }
+//   button {
+//     width: 20%;
+//   }
+
+/* chat-kimi.component.css */
+:host {
+  display: block;
+}

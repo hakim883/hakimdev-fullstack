@@ -1,0 +1,110 @@
+.faq-accordion {
+    max-width: 870px;
+    margin: {
+        left: auto;
+        right: auto;
+    };
+    .accordion-item {
+        box-shadow: 0px 0px 59px 19px rgba(0, 0, 0, 0.03);
+        background-color: var(--whiteColor);
+        color: var(--blackColor);
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: none;
+
+        .accordion-button {
+            display: block;
+            text-align: start;
+            box-shadow: unset;
+            color: var(--blackColor);
+            border-radius: 10px !important;
+            background-color: var(--whiteColor);
+            font: {
+                size: 22px;
+                weight: 700;
+            };
+            padding: {
+                top: 25px;
+                left: 40px;
+                right: 65px;
+                bottom: 25px;
+            };
+            &::after {
+                display: none;
+            }
+            &::before {
+                top: 50%;
+                right: 40px;
+                content: "\f105";
+                position: absolute;
+                font-family: flaticon_loxi;
+                transform: translateY(-50%);
+                transition: var(--transition);
+            }
+            &.collapsed {
+                &::before {
+                    transform: translateY(-50%) rotate(-90deg);
+                }
+            }
+        }
+        .accordion-body {
+            padding: 25px 40px;
+            border-top: 1px solid #eaeaea;
+
+            p {
+                font-size: 17px;
+
+                strong {
+                    color: var(--blackColor);
+                    font-weight: 600;
+                }
+                a {
+                    color: var(--primaryColor);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .faq-accordion {
+        max-width: 100%;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .faq-accordion {
+        max-width: 100%;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .faq-accordion {
+        max-width: 100%;
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

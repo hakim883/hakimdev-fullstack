@@ -1,0 +1,136 @@
+{
+      "about": {
+        "subtitle": "À PROPOS",
+        "title": "Abdelhakim Chaabani - Développeur Full-Stack",
+        "description": "Basé en Suisse Romande, je crée des applications web modernes avec Angular, Spring Boot et WordPress. Disponible pour vos projets et formations.",
+        "feature1": {
+          "title": "Stack Complète",
+          "description": "Angular, Spring Boot, MySQL – applications robustes et évolutives."
+        },
+        "feature2": {
+          "title": "Formation & Support",
+          "description": "Cours personnalisés, accompagnement 24/7 et maintenance continue."
+        },
+        "btn": "Me contacter"
+      },
+      
+        "NAV": { "HOME": "Accueil" },
+        "BLOG": {
+          "TITLE": "Grille des articles",
+          "GRID": "Grille",
+          "READ_MORE": "Lire la suite",
+          "DEFAULT_TITLE": "Le Meta Pro n’est pas l’échec annoncé",
+          "DEFAULT_EXCERPT": "Découvrez pourquoi le Meta Pro mérite une seconde chance et comment il peut transformer votre workflow."
+        },
+        
+        
+          "NAV": { "HOME": "Accueil" },
+          "COURSE": {
+            "TITLE": "Cours",
+            "GRID": "Tous les cours",
+            "DEFAULT_TITLE": "Cours sans titre",
+            "DEFAULT_DESCRIPTION": "Aucune description disponible.",
+            "DOWNLOAD": "Télécharger",
+            "LOGIN_REQUIRED": "Veuillez vous connecter pour télécharger."
+          
+        },
+        
+          "NAV": { "HOME": "Accueil" },
+          "PROJECTS": {
+            "TITLE": "Projets récents",
+            "GRID": "Projets",
+            "DEFAULT_TITLE": "Projet sans titre",
+            "DEFAULT_DESCRIPTION": "Aucune description disponible.",
+            "DOWNLOAD": "Télécharger le projet",
+            "LOGIN_REQUIRED": "Veuillez vous connecter pour télécharger."
+          },
+          
+            "NAV": { "HOME": "Accueil" },
+            "SERVICES": {
+              "TITLE": "Services",
+              "GRID": "Tous les services",
+              "DEFAULT_NAME": "Nom du service",
+              "DEFAULT_DESCRIPTION": "Aucune description disponible.",
+              "VIEW_MORE": "Voir plus"
+            },
+            
+              "EXPERTISE": {
+                "SUB_TITLE": "NOTRE EXPERTISE",
+                "HEADING": "Donnez-nous une idée avec laquelle les gens veulent passer du temps",
+                "DESCRIPTION": "Lorem ipsum dolor sit amet consectetur. Rutrum pretium pulvinar ut nec. Ac consequat blandit gravida turpis a risus pharetra amet molestie.",
+                "FEATURE1_TITLE": "Booster vos ventes",
+                "FEATURE1_DESC": "Lorem ipsum dolor sit amet consectetur. Rutrum pretium pulvinar ut nec. Ac consequat blandit gravida turpis a risus pharetra amet molestie.",
+                "FEATURE2_TITLE": "Idée & Analyse",
+                "FEATURE2_DESC": "Lorem ipsum dolor sit amet consectetur. Rutrum pretium pulvinar ut nec. Ac consequat blandit gravida turpis a risus pharetra amet molestie."
+              },
+              
+                "FAQ": {
+                  "TITLE": "Questions fréquentes",
+                  "Q1_TITLE": "Quelle est la culture d’entreprise ?",
+                  "Q1_CONTENT": "Je dois vous expliquer comment cette idée erronée de dénoncer le plaisir et de louer la douleur est née, et je vous donnerai un compte-rendu complet du système.",
+                  "Q2_TITLE": "Quel marché cible la startup ?",
+                  "Q2_CONTENT": "Je dois vous expliquer comment cette idée erronée de dénoncer le plaisir et de louer la douleur est née, et je vous donnerai un compte-rendu complet du système.",
+                  "Q3_TITLE": "Quelle est la piste de décollage de l’entreprise ?",
+                  "Q3_CONTENT": "Je dois vous expliquer comment cette idée erronée de dénoncer le plaisir et de louer la douleur est née, et je vous donnerai un compte-rendu complet du système.",
+                  "Q4_TITLE": "Qui sont les investisseurs de l’entreprise ?",
+                  "Q4_CONTENT": "Je dois vous expliquer comment cette idée erronée de dénoncer le plaisir et de louer la douleur est née, et je vous donnerai un compte-rendu complet du système.",
+                  "Q5_TITLE": "Comment poser des questions sur votre entreprise ?",
+                  "Q5_CONTENT": "Je dois vous expliquer comment cette idée erronée de dénoncer le plaisir et de louer la douleur est née, et je vous donnerai un compte-rendu complet du système."
+                },
+                
+                  "FEATURES": {
+                    "SUB_TITLE": "Mes Forces",
+                    "TOP_TITLE1": "Full-Stack Pro",
+                    "TOP_DESC1": "Angular, Spring Boot, MySQL – solutions robustes et scalables.",
+                    "TOP_TITLE2": "Multilingue",
+                    "TOP_DESC2": "Français C1, Anglais B2, Arabe natif – communication fluide.",
+                    "TOP_TITLE3": "Disponible",
+                    "TOP_DESC3": "Basé en Suisse Romande – projets immédiats et formations.",
+                    "FEATURE1_TITLE": "Ingénierie Produit",
+                    "FEATURE1_DESC": "Lorem ipsum dolor sit amet consectetur ut. Rutrum pretium pulvinar ut nec. Ato sits consequat blandit gravida.",
+                    "FEATURE2_TITLE": "UX/UI Design",
+                    "FEATURE2_DESC": "Lorem ipsum dolor sit amet consectetur ut. Rutrum pretium pulvinar ut nec. Ato sits consequat blandit gravida.",
+                    "FEATURE3_TITLE": "Big Data & Analytics",
+                    "FEATURE3_DESC": "Lorem ipsum dolor sit amet consectetur ut. Rutrum pretium pulvinar ut nec. Ato sits consequat blandit gravida.",
+                    "VIEW_MORE": "Voir plus"
+                  },
+                  
+                    "FUNFACTS": {
+                      "PROJECTS_COUNT": "1500+",
+                      "PROJECTS_LABEL": "Projets terminés",
+                      "CLIENTS_COUNT": "700+",
+                      "CLIENTS_LABEL": "Clients satisfaits",
+                      "REVIEWS_COUNT": "1275+",
+                      "REVIEWS_LABEL": "Avis positifs",
+                      "AWARDS_COUNT": "250+",
+                      "AWARDS_LABEL": "Récompenses gagnées"
+                    },
+                    
+                      "email": "contact@hakimdev.ch",
+                      "phone": "+41783540949",
+                      "login": "Connexion",
+                      "home": "Accueil",
+                      "services": "Services",
+                      "projects": "Projets",
+                      "about": "À propos",
+                      "blog": "Blog",
+                      "cours": "Cours",
+                      "contact": "Contact",
+                      "letsTalk": "Discutons",
+                      "search": "Rechercher...",
+                      "contactInfo": "Infos Contact",
+                      "address": "2750 Quadra Street Victoria Road, New York, USA"
+                    
+                  
+                
+              
+            
+          
+        
+        
+     
+    
+  
+  }
+  
+ 

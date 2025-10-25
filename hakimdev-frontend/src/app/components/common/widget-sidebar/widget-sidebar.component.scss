@@ -1,0 +1,473 @@
+.widget-area {
+    padding-left: 35px;
+
+    .widget {
+        margin-bottom: 35px;
+
+        .widget-title {
+            border-bottom: 1px solid #e1e1e1;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .widget_search {
+        form {
+            position: relative;
+
+            .search-field {
+                width: 100%;
+                height: 55px;
+                display: block;
+                border-radius: 5px;
+                color: var(--blackColor);
+                font-size: var(--fontSize);
+                border: 1px solid #343434;
+                background-color: #f6f6f6;
+                padding: {
+                    top: 3px;
+                    left: 20px;
+                    right: 20px;
+                };
+                &::placeholder {
+                    transition: var(--transition);
+                    color: var(--paragraphColor);
+                }
+                &:focus {
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
+            }
+            button {
+                top: 50%;
+                padding: 0;
+                right: 22px;
+                border: none;
+                line-height: 1;
+                font-size: 19px;
+                position: absolute;
+                color: var(--blackColor);
+                transform: translateY(-50%);
+                transition: var(--transition);
+                background-color: transparent;
+                
+                &:hover {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+    }
+    .widget_loxi_posts_thumb {
+        .item {
+            margin-bottom: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            display: flex;
+
+            .thumb {
+                border-radius: 15px;
+                display: block;
+                flex: 0 0 auto;
+                width: 27%;
+
+                img {
+                    border-radius: 15px;
+                }
+            }
+            .info {
+                padding-left: 15px;
+                flex: 0 0 auto;
+                width: 73%;
+
+                .title {
+                    font-size: 16px;
+                    line-height: 1.5;
+                    margin: {
+                        bottom: 0;
+                        top: 3px;
+                    };
+                }
+                .date {
+                    font-size: 14px;
+                    color: var(--paragraphColor);
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .widget_categories {
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style-type: none;
+
+            li {
+                margin-bottom: 12px;
+
+                a {
+                    display: flex;
+                    color: var(--blackColor);
+                    justify-content: space-between;
+                    font: {
+                        size: 16px;
+                        weight: 600;
+                    };
+                    &:hover {
+                        color: var(--primaryColor);
+
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                    .count {
+                        color: #666666;
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .widget_follow_us {
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style-type: none;
+
+            li {
+                margin-bottom: 12px;
+
+                a {
+                    color: var(--blackColor);
+                    font: {
+                        size: 16px;
+                        weight: 600;
+                    };
+                    &:hover {
+                        color: var(--primaryColor);
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .widget_tag_cloud {
+        .tagcloud {
+            margin-bottom: -10px;
+
+            a {
+                font-size: 15px;
+                padding: 6px 20px;
+                border-radius: 4px;
+                display: inline-block;
+                color: var(--blackColor);
+                background-color: #eeeeee;
+                margin: {
+                    right: 8px;
+                    bottom: 10px;
+                };
+                &:hover {
+                    color: var(--whiteColor);
+                    background-color: var(--primaryColor);
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .widget-area {
+        padding-left: 0;
+        margin-top: 25px;
+    
+        .widget {
+            margin-bottom: 25px;
+    
+            .widget-title {
+                padding-bottom: 5px;
+                margin-bottom: 18px;
+                font-size: 17px;
+            }
+        }
+        .widget_search {
+            form {
+                .search-field {
+                    height: 48px;
+                    font-size: 14px;
+                    padding: {
+                        top: 3px;
+                        left: 15px;
+                        right: 15px;
+                    };
+                }
+                button {
+                    right: 20px;
+                    font-size: 18px;
+                }
+            }
+        }
+        .widget_loxi_posts_thumb {
+            .item {
+                margin-bottom: 15px;
+    
+                .thumb {
+                    border-radius: 5px;
+
+                    img {
+                        border-radius: 5px;
+                    }
+                }
+                .info {
+                    .title {
+                        font-size: 13px;
+                    }
+                    .date {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .widget_categories {
+            ul {
+                li {
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .widget_follow_us {
+            ul {
+                li {
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .widget_tag_cloud {
+            .tagcloud {
+                a {
+                    font-size: 13px;
+                    padding: 4px 15px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .widget-area {
+        padding-left: 0;
+        margin-top: 25px;
+    
+        .widget {
+            margin-bottom: 25px;
+    
+            .widget-title {
+                padding-bottom: 5px;
+                font-size: 19px;
+            }
+        }
+        .widget_search {
+            form {
+                .search-field {
+                    height: 50px;
+                    font-size: 14px;
+                    padding: {
+                        top: 2px;
+                        left: 15px;
+                        right: 15px;
+                    };
+                }
+                button {
+                    font-size: 17px;
+                    right: 20px;
+                }
+            }
+        }
+        .widget_loxi_posts_thumb {
+            .item {
+                margin-bottom: 15px;
+    
+                .thumb {
+                    border-radius: 8px;
+                    width: 13%;
+    
+                    img {
+                        border-radius: 8px;
+                    }
+                }
+                .info {
+                    .title {
+                        font-size: 15px;
+                    }
+                    .date {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .widget_categories {
+            ul {
+                li {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .widget_follow_us {
+            ul {
+                li {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .widget_tag_cloud {
+            .tagcloud {
+                a {
+                    padding: 5px 18px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .widget-area {
+        padding-left: 0;
+    
+        .widget {
+            margin-bottom: 25px;
+    
+            .widget-title {
+                padding-bottom: 5px;
+                font-size: 21px;
+            }
+        }
+        .widget_search {
+            form {
+                .search-field {
+                    padding: {
+                        top: 2px;
+                        left: 15px;
+                        right: 15px;
+                    };
+                }
+                button {
+                    right: 20px;
+                    font-size: 18px;
+                }
+            }
+        }
+        .widget_loxi_posts_thumb {
+            .item {
+                .thumb {
+                    border-radius: 5px;
+    
+                    img {
+                        border-radius: 5px;
+                    }
+                }
+                .info {
+                    padding-left: 12px;
+    
+                    .title {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .widget_categories {
+            ul {
+                li {
+                    a {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .widget_follow_us {
+            ul {
+                li {
+                    a {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .widget_tag_cloud {
+            .tagcloud {
+                a {
+                    font-size: 14px;
+                    padding: 5px 18px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .widget-area {
+        padding-left: 15px;
+    
+        .widget_loxi_posts_thumb {
+            .item {
+                .info {
+                    .title {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .widget_categories {
+            ul {
+                li {
+                    a {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .widget_follow_us {
+            ul {
+                li {
+                    a {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

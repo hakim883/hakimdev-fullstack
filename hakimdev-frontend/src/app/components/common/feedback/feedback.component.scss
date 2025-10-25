@@ -1,0 +1,241 @@
+.feedback-area {
+    &.bg-color {
+        position: relative;
+        z-index: 1;
+    
+        &::before {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 50%;
+            z-index: -1;
+            content: '';
+            position: absolute;
+            background-color: var(--whiteColor);
+        }
+        &::after {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 50%;
+            z-index: -1;
+            content: '';
+            position: absolute;
+            background: {
+                image: url(../../../../assets/images/bg.png);
+                position: center center;
+                repeat: no-repeat;
+                size: cover;
+            };
+        }
+    }
+}
+.feedback-inner-box {
+    text-align: center;
+    border-radius: 7px;
+    padding: 100px;
+
+    i {
+        margin-bottom: 12px;
+        font-size: 60px;
+        line-height: 1;
+        display: block;
+    }
+    p {
+        color: #343434;
+        font-size: 20px;
+    }
+    .client-info {
+        margin-top: 25px;
+
+        h4 {
+            margin-bottom: 7px;
+            font: {
+                size: 20px;
+                weight: 600;
+            };
+        }
+        span {
+            display: block;
+            color: #343434;
+        }
+    }
+}
+.single-feedback-box {
+    padding: 35px;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.03);
+
+    i {
+        color: var(--blackColor);
+        margin-bottom: 6px;
+        font-size: 60px;
+        line-height: 1;
+        display: block;
+    }
+    p {
+        color: var(--blackColor);
+        font-size: 16px;
+    }
+    .client-info {
+        margin-top: 20px;
+
+        h4 {
+            margin-bottom: 8px;
+            font: {
+                size: 20px;
+                weight: 600;
+            };
+        }
+        span {
+            display: block;
+            color: var(--primaryColor);
+        }
+    }
+}
+.d-none {
+    &.d-block {
+        display: block !important;
+    }
+    &.d-flex {
+        display: flex !important;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .feedback-inner-box {
+        border-radius: 5px;
+        padding: 60px 20px;
+
+        i {
+            margin-bottom: 5px;
+            font-size: 40px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .client-info {
+            margin-top: 15px;
+
+            h4 {
+                margin-bottom: 7px;
+                font-size: 17px;
+            }
+        }
+    }
+    .single-feedback-box {
+        padding: 20px;
+        border-radius: 5px;
+    
+        i {
+            margin-bottom: 4px;
+            font-size: 30px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .client-info {
+            margin-top: 15px;
+
+            h4 {
+                margin-bottom: 7px;
+                font-size: 17px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .feedback-inner-box {
+        padding: 80px 40px;
+
+        i {
+            margin-bottom: 5px;
+            font-size: 50px;
+        }
+        p {
+            font-size: 16px;
+        }
+        .client-info {
+            margin-top: 15px;
+
+            h4 {
+                font-size: 17px;
+            }
+        }
+    }
+    .single-feedback-box {
+        padding: 25px;
+    
+        i {
+            margin-bottom: 4px;
+            font-size: 40px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .client-info {
+            margin-top: 15px;
+
+            h4 {
+                font-size: 17px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .feedback-inner-box {
+        padding: 100px 60px;
+
+        i {
+            font-size: 50px;
+        }
+        p {
+            font-size: 18px;
+        }
+        .client-info {
+            margin-top: 15px;
+
+            h4 {
+                font-size: 18px;
+            }
+        }
+    }
+    .single-feedback-box {
+        padding: 25px;
+    
+        i {
+            margin-bottom: 5px;
+            font-size: 40px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .client-info {
+            margin-top: 15px;
+
+            h4 {
+                font-size: 18px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

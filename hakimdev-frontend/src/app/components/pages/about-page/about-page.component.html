@@ -1,0 +1,123 @@
+<!-- <div class="page-banner-area dotted-bg bg-fbecd7">
+    <div class="container">
+        <div class="page-banner-content">
+            <h1>About Us</h1>
+            <ul class="meta">
+                <li><a routerLink="/">Home</a></li>
+                <li>About Us</li>
+            </ul>
+        </div>
+    </div>
+    <div class="shape1"><img src="assets/images/shape/shape1.png" alt="shape1"></div>
+    <div class="shape2"><img src="assets/images/shape/shape2.png" alt="shape2"></div>
+</div>
+<div class="pt-100 dotted-bg"></div>
+
+<div
+    class="quotes-area dotted-bg bg-color bg-fbecd7">
+<div class="container">
+    <div class="quotes-inner-box dotted-bg bg-f4d9d3">
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-12">
+                <div class="quotes-image">
+                    <img src="assets/images/ceo.jpg" alt="quotes-image">
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="quotes-content">
+                    <i class="flaticon-quotes"></i>
+                  
+                    <section class="testimonial-area">
+                        <blockquote>
+                          <p>
+                            « Grâce à mes 3 ans d’expérience en développement full-stack, je combine rapidité, rigueur et créativité pour livrer des solutions qui répondent vraiment aux besoins. »
+                          </p>
+                          <footer>
+                            <strong>Abdelhakim Chaabani</strong><br>
+                            <span>Développeur Full-Stack • Suisse Romande</span>
+                          </footer>
+                        </blockquote>
+                      </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="pt-100 dotted-bg"></div>
+
+<app-about></app-about>
+
+
+
+<app-funfacts></app-funfacts>
+<div class="pt-100 dotted-bg"></div>
+
+<app-why-choose-us></app-why-choose-us>
+
+<app-feedback></app-feedback>
+
+<div class="pt-100 dotted-bg"></div>
+
+<app-team></app-team>
+
+<app-pricing></app-pricing> -->
+<!-- Page Banner -->
+<div class="page-banner-area dotted-bg bg-fbecd7">
+    <div class="container">
+      <div class="page-banner-content">
+        <h1>{{ currentLang.pageTitle }}</h1>
+        <ul class="meta">
+          <li><a routerLink="/">{{ currentLang.home }}</a></li>
+          <li>{{ currentLang.pageTitle }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="shape1"><img src="assets/images/shape/shape1.png" alt="shape1"></div>
+    <div class="shape2"><img src="assets/images/shape/shape2.png" alt="shape2"></div>
+  </div>
+  
+  <!-- Espacement -->
+  <div class="pt-100 dotted-bg"></div>
+  
+  <!-- Citation principale -->
+  <div class="quotes-area dotted-bg bg-color bg-fbecd7">
+    <div class="container">
+      <div class="quotes-inner-box dotted-bg bg-f4d9d3">
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-md-12">
+            <div class="quotes-image">
+              <img [src]="currentLang.quoteImg" [alt]="currentLang.quoteAlt" />
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-12">
+            <div class="quotes-content">
+              <i class="flaticon-quotes"></i>
+              <section class="testimonial-area">
+                <blockquote>
+                  <p>{{ currentLang.quoteText }}</p>
+                  <footer>
+                    <strong>{{ currentLang.quoteAuthor }}</strong><br />
+                    <span>{{ currentLang.quoteRole }}</span>
+                  </footer>
+                </blockquote>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Espacement -->
+  <div class="pt-100 dotted-bg"></div>
+  
+  <!-- Contenus enfants -->
+  <app-about></app-about>
+  <app-funfacts></app-funfacts>
+  <div class="pt-100 dotted-bg"></div>
+  <app-why-choose-us></app-why-choose-us>
+  <app-feedback></app-feedback>
+  <div class="pt-100 dotted-bg"></div>
+  <app-team></app-team>
+  <app-pricing></app-pricing>

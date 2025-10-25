@@ -1,0 +1,105 @@
+.funfacts-area {
+    position: relative;
+    z-index: 1;
+}
+.single-funfact-box {
+    color: var(--whiteColor);
+
+    h2 {
+        line-height: 1;
+        font-size: 56px;
+        margin-bottom: 8px;
+        color: var(--whiteColor);
+    }
+    span {
+        display: block;
+        font-size: 20px;
+    }
+}
+.funfacts-inner-box {
+    border-radius: 7px;
+    padding: {
+        top: 80px;
+        left: 30px;
+        right: 30px;
+        bottom: 55px;
+    };
+}
+.d-none {
+    &.d-block {
+        display: block !important;
+    }
+    &.d-flex {
+        display: flex !important;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .single-funfact-box {
+        h2 {
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+    .funfacts-inner-box {
+        border-radius: 5px;
+        padding: {
+            top: 60px;
+            left: 15px;
+            right: 15px;
+            bottom: 35px;
+        };
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .single-funfact-box {
+        h2 {
+            font-size: 37px;
+            margin-bottom: 6px;
+        }
+        span {
+            font-size: 16px;
+        }
+    }
+    .funfacts-inner-box {
+        padding: {
+            top: 70px;
+            left: 15px;
+            right: 15px;
+            bottom: 45px;
+        };
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .single-funfact-box {
+        h2 {
+            font-size: 48px;
+        }
+        span {
+            font-size: 17px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

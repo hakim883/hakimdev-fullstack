@@ -1,0 +1,129 @@
+<!-- 
+
+<div class="subscribe-area pt-100 bg-black">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6 col-lg-5 col-md-12">
+          <div class="section-title">
+            <span class="sub-title">NEWSLETTER</span>
+            <h2>Restez à jour sur mes formations & projets</h2>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-12">
+            
+
+          <form class="subscribe-form" (ngSubmit)="subscribe()"> 
+             <input type="email" class="form-control" placeholder="Votre email" 
+             
+             > 
+            <button type="submit" class="default-btn">S'abonner</button>
+          </form>
+        </div>
+      </div>
+      <div class="pt-100"></div>
+      <hr class="m-0">
+    </div>
+  </div>
+  <div class="subscribe-area pt-100 bg-black">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6 col-lg-5 col-md-12">
+          <div class="section-title">
+            <span class="sub-title">NEWSLETTER</span>
+            <h2>Stay updated on my courses & projects</h2>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-12">
+            
+          <form class="subscribe-form" (ngSubmit)="subscribe()">
+            <input type="email" class="form-control" placeholder="Your email" 
+            >
+           
+
+            <button type="submit" class="default-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="pt-100"></div>
+      <hr class="m-0">
+    </div>
+  </div>
+  <div class="subscribe-area pt-100 bg-black">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6 col-lg-5 col-md-12">
+          <div class="section-title">
+            <span class="sub-title">NEWSLETTER</span>
+            <h2>Mantente al día sobre mis cursos y proyectos</h2>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-12">
+            
+          <form class="subscribe-form" (ngSubmit)="subscribe()">
+            <input type="email" class="form-control" placeholder="Tu email" 
+            >
+           
+
+            <button type="submit" class="default-btn">Suscribirse</button>
+          </form>
+        </div>
+      </div>
+      <div class="pt-100"></div>
+      <hr class="m-0">
+    </div>
+  </div>
+  <div class="subscribe-area pt-100 bg-black">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6 col-lg-5 col-md-12">
+          <div class="section-title">
+            <span class="sub-title">NEWSLETTER</span>
+            <h2>ابق على اطلاع على دوراتي ومشاريعي</h2>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-12">
+     
+          <form class="subscribe-form" (ngSubmit)="subscribe()">
+            <input type="email" class="form-control" placeholder="بريدك الإلكتروني"
+             >
+       
+
+            <button type="submit" class="default-btn">اشترك</button>
+          </form>
+        </div>
+      </div>
+      <div class="pt-100"></div>
+      <hr class="m-0">
+    </div>
+  </div> -->
+  <!-- Newsletter Section -->
+<div class="subscribe-area pt-100 bg-black">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-xl-6 col-lg-5 col-md-12">
+        <div class="section-title">
+          <span class="sub-title">{{ currentLang.subTitle }}</span>
+          <h2>{{ currentLang.heading }}</h2>
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-lg-7 col-md-12">
+        <form class="subscribe-form" (ngSubmit)="subscribe()" [formGroup]="form">
+          <input
+            type="email"
+            class="form-control"
+            [placeholder]="currentLang.placeholder"
+            formControlName="email"
+            required
+          />
+          <button type="submit" class="default-btn" [disabled]="form.invalid">
+            {{ currentLang.cta }}
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="pt-100"></div>
+    <hr class="m-0">
+  </div>
+</div>

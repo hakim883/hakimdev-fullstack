@@ -1,0 +1,145 @@
+<!-- <div
+    class="projects-area ptb-100 dotted-bg"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3' || router.url === '/index-4'}"
+>
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">Projets Récents</span>
+           
+            <section class="recent-projects-area">
+                <p>Découvrez mes dernières réalisations full-stack : plateformes e-commerce, dashboards, APIs sécurisées et formations.</p>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <h4>Plateforme E-commerce</h4>
+                    <p>Spring Boot + Angular + Stripe – boutique en ligne multi-devise, panier sécurisé, dashboard admin.</p>
+                    <a routerLink="/projets/1" class="btn-primary">Voir le projet</a>
+                  </div>
+                  <div class="col-lg-4">
+                    <h4>Dashboard Analytics</h4>
+                    <p>Angular + Chart.js – visualisation temps réel des KPIs, export CSV, authentification JWT.</p>
+                    <a routerLink="/projets/2" class="btn-primary">Voir le projet</a>
+                  </div>
+                  <div class="col-lg-4">
+                    <h4>API REST Sécurisée</h4>
+                    <p>Spring Boot + JWT – endpoints multi-langues, rôle-based access, docs Swagger.</p>
+                    <a routerLink="/projets/3" class="btn-primary">Voir le projet</a>
+                  </div>
+                </div>
+              </section>
+        </div>
+        <div class="row justify-content-center extra-margin">
+            <div class="project-big-box">
+                <div class="single-project-box">
+                    <a routerLink="/project-details" class="image d-block">
+                        <img src="assets/images/projects/project1.jpg" alt="project-image">
+                    </a>
+                    <h4><a routerLink="/project-details">Digital Marketing</a></h4>
+                    <a routerLink="/project-details" class="link-btn"><i class="flaticon-right-up"></i></a>
+                </div>
+            </div>
+            <div class="project-small-box">
+                <div class="single-project-box">
+                    <a routerLink="/project-details" class="image d-block">
+                        <img src="assets/images/projects/project2.jpg" alt="project-image">
+                    </a>
+                    <h4><a routerLink="/project-details">Product Engineering</a></h4>
+                    <a routerLink="/project-details" class="link-btn"><i class="flaticon-right-up"></i></a>
+                </div>
+            </div>
+            <div class="project-small-box">
+                <div class="single-project-box">
+                    <a routerLink="/project-details" class="image d-block">
+                        <img src="assets/images/projects/project3.jpg" alt="project-image">
+                    </a>
+                    <h4><a routerLink="/project-details">Company Branding</a></h4>
+                    <a routerLink="/project-details" class="link-btn"><i class="flaticon-right-up"></i></a>
+                </div>
+            </div>
+            <div class="project-big-box">
+                <div class="single-project-box">
+                    <a routerLink="/project-details" class="image d-block">
+                        <img src="assets/images/projects/project4.jpg" alt="project-image">
+                    </a>
+                    <h4><a routerLink="/project-details">Illustrations</a></h4>
+                    <a routerLink="/project-details" class="link-btn"><i class="flaticon-right-up"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="view-all-btn text-center mt-0">
+            <a routerLink="/projects" class="default-btn">View All Projects <i class="flaticon-right-up"></i></a>
+        </div>
+    </div>
+</div> -->
+<div
+  class="projects-area ptb-100 dotted-bg"
+  [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3' || router.url === '/index-4'}"
+>
+  <div class="container">
+    <!-- Titre section -->
+    <div class="section-title">
+      <span class="sub-title">{{ currentLang.subTitle }}</span>
+      <br>
+      <h3><strong>{{ currentLang.heading }}</strong></h3>
+      
+      <p>{{ currentLang.description }}</p>
+    </div>
+
+    <!-- Grille récente -->
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let card of currentLang.recentCards">
+        <h4><strong>{{ card.title }}</strong></h4>
+        <p>{{ card.desc }}</p>
+      <i><a [routerLink]="card.link" class="btn-primary">{{ card.cta }}</a></i>
+      </div>
+    </div>
+<br> <br>
+    <!-- Galerie visuelle -->
+    <div class="row justify-content-center extra-margin">
+      <div class="project-big-box">
+        <div class="single-project-box">
+          <a routerLink="/project-details" class="image d-block">
+            <img src="assets/images/projects/project1.jpg" [alt]="currentLang.gallery1.alt">
+          </a>
+          <h4><a routerLink="/project-details">{{ currentLang.gallery1.title }}</a></h4>
+          <a routerLink="/project-details" class="link-btn"><i class="flaticon-right-up"></i></a>
+        </div>
+      </div>
+
+      <div class="project-small-box">
+        <div class="single-project-box">
+          <a routerLink="/project-details" class="image d-block">
+            <img src="assets/images/projects/project2.jpg" [alt]="currentLang.gallery2.alt">
+          </a>
+          <h4><a routerLink="/project-details">{{ currentLang.gallery2.title }}</a></h4>
+          <a routerLink="/project-details" class="link-btn"><i class="flaticon-right-up"></i></a>
+        </div>
+      </div>
+
+      <div class="project-small-box">
+        <div class="single-project-box">
+          <a routerLink="/project-details" class="image d-block">
+            <img src="assets/images/projects/project3.jpg" [alt]="currentLang.gallery3.alt">
+          </a>
+          <h4><a routerLink="/project-details">{{ currentLang.gallery3.title }}</a></h4>
+          <a routerLink="/project-details" class="link-btn"><i class="flaticon-right-up"></i></a>
+        </div>
+      </div>
+
+      <div class="project-big-box">
+        <div class="single-project-box">
+          <a routerLink="/project-details" class="image d-block">
+            <img src="assets/images/projects/project4.jpg" [alt]="currentLang.gallery4.alt">
+          </a>
+          <h4><a routerLink="/project-details">{{ currentLang.gallery4.title }}</a></h4>
+          <a routerLink="/project-details" class="link-btn"><i class="flaticon-right-up"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="view-all-btn text-center mt-0">
+      <a routerLink="/projects" class="default-btn">
+        {{ currentLang.viewAll }} <i class="flaticon-right-up"></i>
+      </a>
+    </div>
+  </div>
+</div>
