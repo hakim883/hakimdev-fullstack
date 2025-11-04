@@ -25,7 +25,7 @@ export class AboutPageComponent {
       quoteImg: 'assets/images/ceo.jpg',
       quoteAlt: 'CEO portrait',
       quoteText:
-        'With 3 years of full-stack development experience, I combine speed, rigor and creativity to deliver solutions that truly meet needs.',
+        'With 5 years of full-stack development experience, I combine speed, rigor and creativity to deliver solutions that truly meet needs.',
       quoteAuthor: 'Abdelhakim Chaabani',
       quoteRole: 'Full-Stack Developer • French-speaking Switzerland'
     },
@@ -35,7 +35,7 @@ export class AboutPageComponent {
       quoteImg: 'assets/images/ceo.jpg',
       quoteAlt: 'portrait PDG',
       quoteText:
-        'Grâce à mes 3 ans d’expérience en développement full-stack, je combine rapidité, rigueur et créativité pour livrer des solutions qui répondent vraiment aux besoins.',
+        'Grâce à mes 5 ans d’expérience en développement full-stack, je combine rapidité, rigueur et créativité pour livrer des solutions qui répondent vraiment aux besoins.',
       quoteAuthor: 'Abdelhakim Chaabani',
       quoteRole: 'Développeur Full-Stack • Suisse Romande'
     },
@@ -45,7 +45,7 @@ export class AboutPageComponent {
       quoteImg: 'assets/images/ceo.jpg',
       quoteAlt: 'CEO-Portrait',
       quoteText:
-        'Mit 3 Jahren Erfahrung in der Full-Stack-Entwicklung verbinde ich Geschwindigkeit, Präzision und Kreativität, um Lösungen zu liefern, die den Bedürfnissen wirklich entsprechen.',
+        'Mit 5 Jahren Erfahrung in der Full-Stack-Entwicklung verbinde ich Geschwindigkeit, Präzision und Kreativität, um Lösungen zu liefern, die den Bedürfnissen wirklich entsprechen.',
       quoteAuthor: 'Abdelhakim Chaabani',
       quoteRole: 'Full-Stack-Entwickler • Romandie'
     },
@@ -55,7 +55,7 @@ export class AboutPageComponent {
       quoteImg: 'assets/images/ceo.jpg',
       quoteAlt: 'صورة المدير التنفيذي',
       quoteText:
-        'بفضل خبرتي التي تبلغ 3 سنوات في التطوير الشامل، أجمع بين السرعة والدقة والإبداع لتقديم حلول تلبي الاحتياجات فعلاً.',
+        'بفضل خبرتي التي تبلغ 5 سنوات في التطوير الشامل، أجمع بين السرعة والدقة والإبداع لتقديم حلول تلبي الاحتياجات فعلاً.',
       quoteAuthor: 'عبد الحكيم الشعابني',
       quoteRole: 'مطوّر شامل • سويسرا الناطقة بالفرنسية'
     }

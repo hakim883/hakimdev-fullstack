@@ -1,27 +1,27 @@
-// import { Component } from '@angular/core';
-// import { ChatService } from '../../services/chat.service';
+import { Component } from '@angular/core';
+//import { ChatService } from '../../services/chat.service';
 
-// @Component({
-//   selector: 'app-chat',
-//   templateUrl: './chat.component.html'
-// })
-// export class ChatComponent {
-//   message = '';
-//   messages: any[] = [];
+@Component({
+  selector: 'app-chat',
+  templateUrl: './chat.component.html'
+})
+export class ChatComponent {
+  message = '';
+  messages: any[] = [];
 
-//   constructor(private chatService: ChatService) {
-//     this.chatService.messages$.subscribe((msg: any) => {
-//       if (msg) this.messages.push(msg);
-//     });
+  constructor(private chatService: ChatService) {
+    this.chatService.messages$.subscribe((msg: any) => {
+      if (msg) this.messages.push(msg);
+    });
     
-//   }
+  }
 
-//   sendMessage() {
-//     const username = localStorage.getItem('username'); // ou via AuthService
-//     this.chatService.sendMessage(username!, this.message);
-//     this.message = '';
-//   }
-// }
+  sendMessage() {
+    const username = localStorage.getItem('username'); // ou via AuthService
+    this.chatService.sendMessage(username!, this.message);
+    this.message = '';
+  }
+}
 
 
 import { Injectable } from '@angular/core';

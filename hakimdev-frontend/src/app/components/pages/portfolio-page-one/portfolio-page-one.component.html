@@ -58,7 +58,6 @@
               </div>
             </div>
       
-            <!-- Comments preview -->
             <div class="comments-preview mt-2">
               <div *ngIf="comments[p.id]?.length; else noComments">
                 <div *ngFor="let c of (p.showAllComments ? comments[p.id] : comments[p.id] | slice:0:2)" class="comment d-flex align-items-start mb-1">

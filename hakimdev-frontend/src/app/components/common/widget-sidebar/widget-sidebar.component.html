@@ -1,60 +1,5 @@
-<!-- 
-<aside class="widget-area">
-    <div class="widget widget_search">
-      <form>
-        <input type="search" class="search-field" [placeholder]="currentLang.searchPlaceholder">
-        <button type="submit"><i class="flaticon-search"></i></button>
-      </form>
-    </div>
-  
-    <div class="widget widget_loxi_posts_thumb">
-      <h3 class="widget-title">{{ currentLang.latestPosts }}</h3>
-      <article class="item" *ngFor="let post of posts">
-        <a routerLink="/blog-details" class="thumb">
-          <img [src]="post.img" alt="blog-image">
-        </a>
-        <div class="info">
-          <span class="date">{{ post.date }}</span>
-          <h4 class="title"><a routerLink="/blog-details">{{ post.title }}</a></h4>
-        </div>
-      </article>
-    </div>
-  
-    <div class="widget widget_categories">
-      <h3 class="widget-title">{{ currentLang.categories }}</h3>
-      <ul>
-        <li><a routerLink="/blog-grid">{{ currentLang.catWeb }} <span class="count">(05)</span></a></li>
-        <li><a routerLink="/blog-grid">{{ currentLang.catBranding }} <span class="count">(14)</span></a></li>
-        <li><a routerLink="/blog-grid">{{ currentLang.catDigital }} <span class="count">(03)</span></a></li>
-        <li><a routerLink="/blog-grid">{{ currentLang.catGraphics }} <span class="count">(12)</span></a></li>
-        <li><a routerLink="/blog-grid">{{ currentLang.catMarketing }} <span class="count">(25)</span></a></li>
-      </ul>
-    </div>
-  
-    <div class="widget widget_follow_us">
-      <h3 class="widget-title">{{ currentLang.followUs }}</h3>
-      <ul>
-        <li><a href="#" target="_blank">Facebook</a></li>
-        <li><a href="#" target="_blank">Twitter</a></li>
-        <li><a href="#" target="_blank">Instagram</a></li>
-        <li><a href="#" target="_blank">Pinterest</a></li>
-        <li><a href="#" target="_blank">Linkedin</a></li>
-      </ul>
-    </div>
-  
-    <div class="widget widget_tag_cloud">
-      <h3 class="widget-title">{{ currentLang.tags }}</h3>
-      <div class="tagcloud">
-        <a routerLink="/blog-grid">{{ currentLang.tagAffiliate }}</a>
-        <a routerLink="/blog-grid">{{ currentLang.tagMotion }}</a>
-        <a routerLink="/blog-grid">{{ currentLang.tagDigital }}</a>
-        <a routerLink="/blog-grid">{{ currentLang.tagLanding }}</a>
-        <a routerLink="/blog-grid">{{ currentLang.tagBranding }}</a>
-      </div>
-    </div>
-  </aside> -->
+
   <aside class="widget-area">
-    <!-- Recherche -->
     <div class="widget widget_search">
       <form>
         <input
@@ -66,7 +11,6 @@
       </form>
     </div>
   
-    <!-- Derniers articles -->
     <div class="widget widget_loxi_posts_thumb">
       <h3 class="widget-title">{{ currentLang.latestPosts }}</h3>
       <article class="item" *ngFor="let post of posts">
@@ -82,7 +26,6 @@
       </article>
     </div>
   
-    <!-- Catégories -->
     <div class="widget widget_categories">
       <h3 class="widget-title">{{ currentLang.categories }}</h3>
       <ul>
@@ -94,7 +37,6 @@
       </ul>
     </div>
   
-    <!-- Réseaux sociaux -->
     <div class="widget widget_follow_us">
       <h3 class="widget-title">{{ currentLang.followUs }}</h3>
       <ul>
@@ -104,7 +46,6 @@
       </ul>
     </div>
   
-    <!-- Tags -->
     <div class="widget widget_tag_cloud">
       <h3 class="widget-title">{{ currentLang.tags }}</h3>
       <div class="tagcloud">

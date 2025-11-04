@@ -1,96 +1,4 @@
-<!-- 
-<div class="page-banner-area dotted-bg bg-fbecd7">
-    <div class="container">
-      <div class="page-banner-content">
-        <h1>{{ 'Services' | translate }}</h1>
-        <ul class="meta">
-          <li><a routerLink="/">{{ 'Home' | translate }}</a></li>
-          <li>{{ 'Services' | translate }}</li>
-        </ul>
-      </div>
-    </div>
-    <div class="shape1"><img src="assets/images/shape/shape1.png" alt="shape1"></div>
-    <div class="shape2"><img src="assets/images/shape/shape2.png" alt="shape2"></div>
-  </div>
-  
-  <div class="services-area pt-100 pb-75 dotted-bg">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="single-service-box mb-25">
-            <div class="icon"><i class="flaticon-presentation"></i></div>
-            <h4><a routerLink="/service-details">{{ 'Strategy' | translate }}</a></h4>
-            <p>{{ 'un plan qui définit la manière dont une entreprise propose, gère et fournit des services pour répondre aux besoins des clients et aligner les opérations sur les objectifs de l`entreprise' | translate }}</p>
-            <a routerLink="/service-details" class="link-btn">{{ 'View_More' | translate }} <i class="flaticon-right-up"></i></a>
-          </div>
-        </div>
-  
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="single-service-box mb-25">
-            <div class="icon"><i class="flaticon-web-programming"></i></div>
-            <h4><a routerLink="/service-details">{{ 'Web_Dev' | translate }}</a></h4>
-            <p>{{ ' une prestation professionnelle qui englobe la conception, la création, le déploiement et la maintenance de sites web et d`applications en ligne. Il comprend la programmation à l`aide de langages comme le HTML, CSS, et JavaScript pour le front-end (ce que l`utilisateur voit) et des langages comme PHP ou Python pour le back-end (gestion des bases de données et des serveurs). Le service inclut l`analyse des besoins, le développement de fonctionnalités, les tests, la mise en ligne, et l`optimisation pour offrir une expérience utilisateur optimale' | translate }}</p>
-            <a routerLink="/service-details" class="link-btn">{{ 'View_More' | translate }} <i class="flaticon-right-up"></i></a>
-          </div>
-        </div>
-  
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="single-service-box mb-25">
-            <div class="icon"><i class="flaticon-content-management"></i></div>
-            <h4><a routerLink="/service-details">{{ 'Digital_Marketing' | translate }}</a></h4>
-            <p>{{ 'un ensemble de techniques et de stratégies utilisant les canaux numériques (sites web, réseaux sociaux, e-mails, moteurs de recherche) pour promouvoir des produits, services ou une marque, attirer des prospects et générer des ventes. Il inclut des actions comme l`optimisation pour les moteurs de recherche (SEO), la publicité en ligne (PPC), la gestion des réseaux sociaux, le marketing de contenu et l`email marketing pour atteindre les objectifs de visibilité et de notoriété d`une entreprise.' | translate }}</p>
-            <a routerLink="/service-details" class="link-btn">{{ 'View_More' | translate }} <i class="flaticon-right-up"></i></a>
-          </div>
-        </div>
-  
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="single-service-box mb-25">
-            <div class="icon"><i class="flaticon-curve"></i></div>
-            <h4><a routerLink="/service-details">{{ 'Graphics' | translate }}</a></h4>
-            <p>{{ 'consiste à créer des compositions visuelles uniques en combinant images, textes, formes et couleurs pour transmettre efficacement un message à un public cible. Son objectif principal est de susciter une émotion, d`informer ou de persuader, en concevant des éléments graphiques comme des logos, des affiches, des documents ou des interfaces numériques pour des usages variés' | translate }}</p>
-            <a routerLink="/service-details" class="link-btn">{{ 'View_More' | translate }} <i class="flaticon-right-up"></i></a>
-          </div>
-        </div>
-  
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="single-service-box mb-25">
-            <div class="icon"><i class="flaticon-data"></i></div>
-            <h4><a routerLink="/service-details">{{ 'Data_Analysis' | translate }}</a></h4>
-            <p>{{ 'un processus qui consiste à collecter, nettoyer, transformer et modéliser des données brutes pour en extraire des informations pertinentes et des tendances, permettant ainsi aux entreprises de prendre des décisions éclairées, d`optimiser leurs processus et de mieux comprendre leur marché' | translate }}</p>
-            <a routerLink="/service-details" class="link-btn">{{ 'View_More' | translate }} <i class="flaticon-right-up"></i></a>
-          </div>
-        </div>
-  
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="single-service-box mb-25">
-            <div class="icon"><i class="flaticon-coding"></i></div>
-            <h4><a routerLink="/service-details">{{ 'App_Development' | translate }}</a></h4>
-            <p>{{ 'l`ensemble des activités de conception, de création, de mise en œuvre, de test et de maintenance d`un logiciel, d`une application web ou mobile, et parfois d`une application pour entreprise, afin de répondre à des besoins spécifiques. Ce processus couvre l`écriture du code, la conception de l`interface utilisateur (UI) et de l`expérience utilisateur (UX), la gestion du projet, et l`assurance que l`application est sécurisée, optimisée et compatible avec différentes plateformes.' | translate }}</p>
-            <a routerLink="/service-details" class="link-btn">{{ 'View_More' | translate }} <i class="flaticon-right-up"></i></a>
-          </div>
-        </div>
-  
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="single-service-box mb-25">
-            <div class="icon"><i class="flaticon-taget"></i></div>
-            <h4><a routerLink="/service-details">{{ 'UI & UX Design' | translate }}</a></h4>
-            <p>{{ 'consiste à concevoir des produits numériques (sites web, applications) pour qu`ils soient à la fois performants et agréables à utiliser. Il s`agit d`une collaboration entre le design UX (User Experience), qui se concentre sur l`expérience globale et les besoins de l`utilisateur, et le design UI (User Interface), qui crée l`aspect visuel et les éléments d`interaction. L`objectif est d`offrir une expérience utilisateur fluide, intuitive et satisfaisante, tout en répondant aux objectifs de l`entreprise. ' | translate }}</p>
-            <a routerLink="/service-details" class="link-btn">{{ 'View_More' | translate }} <i class="flaticon-right-up"></i></a>
-          </div>
-        </div>
-  
-        <div class="col-lg-6 col-md-6 col-sm-6">
-          <div class="single-service-box mb-25">
-            <div class="icon"><i class="flaticon-diagram-1"></i></div>
-            <h4><a routerLink="/service-details">{{ 'Web Branding' | translate }}</a></h4>
-            <p>{{ 'consiste à définir, développer et gérer l`identité visuelle et la réputation d`une entreprise sur internet, à travers le site web et les autres canaux digitaux, afin de créer une image de marque forte, cohérente et mémorable pour attirer et fidéliser un public cible. Ce processus inclut la création d`un logo et d`une charte graphique, l`élaboration d`un storytelling, la définition du positionnement de la marque et une communication constante sur ses valeurs et sa mission' | translate }}</p>
-            <a routerLink="/service-details" class="link-btn">{{ 'View_More' | translate }} <i class="flaticon-right-up"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- Page Banner -->
+
 <div class="page-banner-area dotted-bg bg-fbecd7">
   <div class="container">
     <div class="page-banner-content">
@@ -105,18 +13,17 @@
   <div class="shape2"><img src="assets/images/shape/shape2.png" alt="shape2" /></div>
 </div>
 
-<!-- Services -->
 <div class="services-area pt-100 pb-75 dotted-bg">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-6 col-md-6 col-sm-6" *ngFor="let s of services">
         <div class="single-service-box mb-25">
           <div class="icon"><i class="{{ s.icon }}"></i></div>
-          <h4><a routerLink="/service-details">{{ s.title }}</a></h4>
+          <h4><a routerLink="/services">{{ s.title }}</a></h4>
           <p>{{ s.desc }}</p>
-          <a routerLink="/service-details" class="link-btn">
+          <!-- <a routerLink="/service-details" class="link-btn">
             {{ currentLang.viewMore }} <i class="flaticon-right-up"></i>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 .cours-list {
     display: flex;
     flex-direction: column;
-    gap: 20px; // espace entre les cartes
+    gap: 20px; 
   }
   
   .cours-card {
@@ -14,7 +14,7 @@
   
     .media-container {
       display: flex;
-      gap: 12px; // ≈ 3mm
+      gap: 12px; 
       align-items: center;
   
       img,

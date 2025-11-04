@@ -1,42 +1,4 @@
-// import { Component } from '@angular/core';
-// import { FormBuilder, Validators } from '@angular/forms';
-// import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
-// @Component({
-//   selector: 'app-contact-page',
-//   templateUrl: './contact-page.component.html',
-//   styleUrls: ['./contact-page.component.scss']
-// })
-// export class ContactPageComponent {
-
-//   form = this.fb.group({
-//     name:    ['', [Validators.required]],
-//     email:   ['', [Validators.required, Validators.email]],
-//     phone:   ['', []],
-//     message: ['', [Validators.required]]
-//   });
-
-//   constructor(private fb: FormBuilder) {}
-
-//   onSubmit(): void {
-//     if (this.form.invalid) { return; }
-
-//     emailjs.send(
-//       'service_48zra4a',           
-//       'template_lhu8ycs',         
-//       this.form.value as any, 
-//       '2uR3NBpS5i0LZCfOQ'               
-//     ).then(
-//       (res: EmailJSResponseStatus) => {
-//         alert('Message envoyé !');
-//         this.form.reset();
-//       },
-//       (err) => {
-//         alert('Erreur : ' + JSON.stringify(err));
-//       }
-//     );
-//   }
-// }
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';

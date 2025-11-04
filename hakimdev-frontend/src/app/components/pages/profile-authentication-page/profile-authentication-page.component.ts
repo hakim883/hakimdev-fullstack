@@ -1,36 +1,4 @@
-// import { Component } from '@angular/core';
-// import { AuthService } from '../../../services/auth.service';
-// import { Router } from '@angular/router';
 
-// @Component({
-//   selector: 'app-profile-authentication-page',
-//   templateUrl: './profile-authentication-page.component.html'
-// })
-// export class ProfileAuthenticationPageComponent {
-//   email = '';
-//   password = '';
-//   username = '';
-
-//   constructor(private authService: AuthService, private router: Router) {}
-
-//   login() {
-//     this.authService.login(this.email, this.password).subscribe({
-//       next: (res: any) => {
-//         this.authService.saveToken(res.token);
-//         alert('✅ Connecté');
-//         this.router.navigate(['/']); // redirige vers accueil
-//       },
-//       error: () => alert('❌ Identifiants invalides')
-//     });
-//   }
-
-//   register() {
-//     this.authService.register(this.username, this.email, this.password).subscribe({
-//       next: () => alert('✅ Compte créé'),
-//       error: (err) => alert('❌ Erreur : ' + err.error.error)
-//     });
-//   }
-// }
 import { Component } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 import { Router } from '@angular/router';

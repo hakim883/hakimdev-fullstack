@@ -1,26 +1,4 @@
 
-// import { Component } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
-// import { NgModel } from '@angular/forms';
-
-// @Component({
-//   selector: 'app-subscribe',
-//   templateUrl: './subscribe.component.html',
-//   standalone: true,
-//   imports: []
-// })
-// export class SubscribeComponent {
-//   email = '';
-
-//   constructor(private http: HttpClient) {}
-
-//   subscribe() {
-//     if (!this.email) return;
-//     this.http.post('http://localhost:8080/api/newsletter', { email: this.email })
-//       .subscribe(() => alert('✅ Abonné !'));
-//     this.email = '';
-//   }
-// }
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';

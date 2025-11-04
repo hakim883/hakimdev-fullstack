@@ -1,13 +1,4 @@
-// import { Component } from '@angular/core';
 
-// @Component({
-//   selector: 'app-forgot-password-page',
-//   templateUrl: './forgot-password-page.component.html',
-//   styleUrls: ['./forgot-password-page.component.scss']
-// })
-// export class ForgotPasswordPageComponent {
-
-// }
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 
@@ -75,7 +66,6 @@ export class ForgotPasswordPageComponent {
   }
 
   onSubmit(): void {
-    // TODO: appeler votre endpoint de réinitialisation
     console.log('Reset demandé pour :', this.form.value.email);
   }
 }

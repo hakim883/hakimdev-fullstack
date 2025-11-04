@@ -27,7 +27,6 @@ export class PortfolioPageOneComponent implements OnInit {
     return Math.max(1, Math.ceil(this.projets.length / this.pageSize));
   }
 
-  // Tableau [1, 2, 3, ...]
   get pages(): number[] {
     return Array.from({ length: this.totalPages }, (_, i) => i + 1);
   }
@@ -126,7 +125,7 @@ export class PortfolioPageOneComponent implements OnInit {
     }
     const lang = localStorage.getItem('lang') || 'fr';
     this.switchLang(lang);
-    const token = localStorage.getItem('token'); // ou authService.getToken()
+    const token = localStorage.getItem('token'); 
     if (!token) {
       alert('Vous devez vous connecter pour voir les projets.');
       return;
@@ -150,7 +149,6 @@ export class PortfolioPageOneComponent implements OnInit {
       this.projets = this.remapProjetsForLang(projetsMapped, lang);
       this.currentPage = 1;
   
-      // Charger les commentaires après que les projets soient prêts
       this.projets.forEach(p => this.loadComments(p.id));
 
     });
@@ -176,7 +174,7 @@ getImageSrc(imagePath: string | null): string {
     return final;
   }
   private remapProjetsForLang(list: any[], lang: string) {
-    return list.map((p: any) => {  // <--- ajoute (p: any)
+    return list.map((p: any) => {  
       let title = '';
       let description = '';
   
@@ -206,50 +204,40 @@ getImageSrc(imagePath: string | null): string {
         ...p,
         title,
         description,
-        showAllComments: p.showAllComments ?? false  // assure que c'est défini
+        showAllComments: p.showAllComments ?? false  
       };
     });
   }
   
  
-  comments: { [id: number]: any[] } = {}; // pour stocker les commentaires par projet
+  comments: { [id: number]: any[] } = {};
   newComment: { [id: number]: string } = {};
   switchLang(language: string): void {
-    // liste des langues supportées
     const keys = ['en', 'fr', 'de', 'ar'] as const;
   
-    // si la valeur passée n'est pas dans la liste -> tomber sur 'fr'
     const lang = (keys as readonly string[]).includes(language) ? language : 'fr';
   
-    // stocker la langue choisie
     localStorage.setItem('lang', lang);
   
-    // mettre à jour currentLang (pour les labels de la page)
     this.currentLang = this.texts[lang as keyof typeof this.texts];
   
-    // remapper les projets existants pour afficher les bons titres/resumes
     if (this.projets && this.projets.length) {
       this.projets = this.remapProjetsForLang(this.projets, lang);
     }
   }
-  // Retourne soit la version courte (100 chars + '...') soit la version complète
 getDisplayedDescription(p: any): string {
   const desc = p?.description ?? '';
-  if (!desc) return '';            // pas de description
-  if (p.showFull) return desc;     // afficher tout
-  // sinon tronquer à 100 caractères sans couper en plein milieu d'un mot (optionnel)
+  if (!desc) return '';            
+  if (p.showFull) return desc;     
   if (desc.length <= 100) return desc;
-  // couper proprement au dernier espace avant 100 chars
   const cut = desc.slice(0, 100);
   const lastSpace = cut.lastIndexOf(' ');
   return (lastSpace > 40 ? cut.slice(0, lastSpace) : cut) + '...';
 }
 
-// bascule l'état showFull sur le projet
 toggleDescription(p: any) {
   p.showFull = !p.showFull;
 }
-// Ajout d'un commentaire
 
 addComment(id: number): void {
   if (!this.authService.isLoggedIn()) {
@@ -263,9 +251,7 @@ addComment(id: number): void {
   this.projetService.addCommentaire(id, content).subscribe({
     next: (newComment: any) => {
       if (!this.comments[id]) this.comments[id] = [];
-      // éviter doublons: vérifier par id si existant
       if (!this.comments[id].some((c: any) => c.id === newComment.id)) {
-        // mettre en tête (commentaires récents en haut)
         this.comments[id].unshift(newComment);
       }
       this.newComment[id] = '';
@@ -277,7 +263,6 @@ addComment(id: number): void {
   });
 }
 
-// toggleLike: utilise la réponse backend qui renvoie { liked, likeCount }
 toggleLike(id: number): void {
   if (!this.authService.isLoggedIn()) {
     alert('Veuillez vous connecter pour aimer ce projet.');
@@ -299,29 +284,23 @@ toggleLike(id: number): void {
   });
 }
 
-// download: ouvre le repo en ZIP si GitHub repo, sinon ouvre fileUrl
 download(p: any) {
   if (!p || !p.fileUrl) {
     alert('Fichier non disponible');
     return;
   }
 
-  // Heuristique : si fileUrl contient github.com and not ending with .zip -> open repo archive main.zip
   const url = p.fileUrl;
   if (url.includes('github.com') && !url.endsWith('.zip')) {
-    // essayer branch "main" (si ton repo a "master" change manuellement)
     const normalized = url.replace(/\/$/, '');
-    // si l'url est du type https://github.com/user/repo ou https://github.com/user/repo/
-    // on construit : https://github.com/user/repo/archive/refs/heads/main.zip
+
     const zipUrl = `${normalized}/archive/refs/heads/main.zip`;
     window.open(zipUrl, '_blank');
   } else {
-    // sinon ouvrir le lien tel quel (peut être fichier direct ou raw)
     window.open(url, '_blank');
   }
 }
 
-// loadComments : s'assure d'initialiser le tableau correctement
 loadComments(id: number): void {
   this.projetService.getCommentaires(id).subscribe((data: any[]) => {
     this.comments[id] = data || [];

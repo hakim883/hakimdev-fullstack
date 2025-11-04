@@ -1,20 +1,4 @@
-  // this.http
-    //   .get<any[]>('http://localhost:8080/api/articles')
-    //   .subscribe(data =>
-    //     (
- 
-    //     this.articles = data.map(a => {
-    //       const d = new Date(a.datePublication || a.createdAt);
-    //       return {
-    //         ...a,
-    //         day: d.getDate(),
-    //         month: d.toLocaleString('default', { month: 'short' }), // "Aug", "Août", etc.
-    //         title: a.titre
 
-    //       };
-    //     }).sort((a, b) => new Date(b.datePublication || b.createdAt).getTime() - new Date(a.datePublication || a.createdAt).getTime())
-    //   )
-    //   );
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
@@ -32,7 +16,6 @@ export class BlogGridPageComponent implements OnInit {
   pageSize = 6;
   currentPage = 1;
 
-  // Articles de la page courante
   get pagedArticles() {
     const start = (this.currentPage - 1) * this.pageSize;
     return this.articles.slice(start, start + this.pageSize);
@@ -42,7 +25,6 @@ export class BlogGridPageComponent implements OnInit {
     return Math.max(1, Math.ceil(this.articles.length / this.pageSize));
   }
 
-  // Tableau [1, 2, 3, ...]
   get pages(): number[] {
     return Array.from({ length: this.totalPages }, (_, i) => i + 1);
   }
@@ -224,11 +206,9 @@ export class BlogGridPageComponent implements OnInit {
       next: (data: any[]) => {
         console.log("✅ Projets chargés :", data);
   
-        // remap langue
         const lang = localStorage.getItem('lang') || 'fr';
         this.articles = this.remapArticlesForLang(data, lang);
   
-        // tri par date si dispo
         this.articles.sort((a, b) => {
           const ta = a.datePublication ? new Date(a.datePublication).getTime() : 0;
           const tb = b.datePublication ? new Date(b.datePublication).getTime() : 0;
@@ -242,64 +222,4 @@ export class BlogGridPageComponent implements OnInit {
       }
     });
 }
-
-//   ngOnInit() {
-//     const saved = localStorage.getItem('lang') || 'fr';
-//     this.switchLang(saved);
-
-  
-//     this.http.get<any[]>('http://localhost:8080/api/articles')
-//    .subscribe(data => {
-//       this.articles = data.map(a => {
-//          const d = new Date(a.datePublication || a.createdAt);
-    
-//         let title = '';
-//         let description = '';
-//         switch (localStorage.getItem('lang') || 'fr') {
-//           case 'fr':
-//             title = a.titre_fr || a.titre;
-//             description = a.resume_fr || a.resume;
-//             break;
-//           case 'en':
-//             title = a.titre_en || a.titre;
-//             description = a.resume_en || a.resume;
-//             break;
-//           case 'de':
-//             title = a.titre_de || a.titre;
-//             description = a.resume_de || a.resume;
-//             break;
-//           case 'ar':
-//             title = a.titre_ar || a.titre;
-//             description = a.resume_ar || a.resume;
-//             break;
-//         }
-    
-//         return {
-//           ...a,
-//           day: d.getDate(),
-//           month: d.toLocaleString('default', { month: 'short' }),
-//           title,
-//           description,
-//           showFull: false 
-//         };
-//       }).sort((a, b) =>
-//         new Date(b.datePublication || b.createdAt).getTime() -
-//         new Date(a.datePublication || a.createdAt).getTime()
-//       );
-//     });
-    
-//   }
-
-//   switchLang(language: string): void {
-//     const keys = ['en', 'fr', 'de', 'ar'] as const;
-//     if (keys.includes(language as any)) {
-//       this.currentLang = this.texts[language as keyof typeof this.texts];
-//     }
-//   }
-//   getImageSrc(imagePath: string | null): string {
-//     if (!imagePath) {
-//       return 'assets/images/blog/blog1.jpg';
-//     }
-//     return imagePath.startsWith('assets/') ? imagePath : `assets/${imagePath}`;
-//   }
  }

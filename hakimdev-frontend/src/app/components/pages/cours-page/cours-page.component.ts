@@ -12,16 +12,15 @@ import { CoursService } from 'src/app/services/cours.service';
 })
 export class CoursPageComponent implements OnInit {
   isLoggedIn = false;
-  comments: { [id: number]: any[] } = {}; // les commentaires par cours
-newComment: { [id: number]: string } = {}; // les commentaires en cours de saisie
+  comments: { [id: number]: any[] } = {}; 
+newComment: { [id: number]: string } = {}; 
 
-  // données
-  cours: any[] = [];       // tableau complet remappé
-  // pagination
-  pageSize = 3;            // <-- 3 cours par page
+  cours: any[] = [];      
+  
+  pageSize = 3;          
   currentPage = 1;
 
-  // textes UI / langue
+
   currentLang: any = {};
   readonly texts = {
     en: { pageTitle: 'Courses', home: 'Home', download: 'Download', readMore: 'Read more', reduce: 'Show less', loginRequired: 'Please log in to download the course.' },
@@ -36,7 +35,7 @@ newComment: { [id: number]: string } = {}; // les commentaires en cours de saisi
 
   ngOnInit() {
     const lang = localStorage.getItem('lang') || 'fr';
-    this.switchLang(lang, true); // initialise currentLang sans réécrire localStorage
+    this.switchLang(lang, true); 
    
     
       this.isLoggedIn = this.authService.isLoggedIn();
@@ -55,14 +54,12 @@ newComment: { [id: number]: string } = {}; // les commentaires en cours de saisi
             const d = c.datePublication ? new Date(c.datePublication) : new Date();
             return {
               ...c,
-              // garde l'id intact
               id: c.id,
               day: d.getDate(),
               month: d.toLocaleString('default', { month: 'short' }),
               showFull: false
             };
           })
-          // tri par date de publication (plus recent first)
           .sort((a, b) => {
             const ta = a.datePublication ? new Date(a.datePublication).getTime() : 0;
             const tb = b.datePublication ? new Date(b.datePublication).getTime() : 0;
@@ -78,18 +75,15 @@ newComment: { [id: number]: string } = {}; // les commentaires en cours de saisi
     
   }
 
-  // retourne les éléments à afficher sur la page courante
   get pagedCours() {
     const start = (this.currentPage - 1) * this.pageSize;
     return this.cours.slice(start, start + this.pageSize);
   }
 
-  // nombre total de pages
   get totalPages(): number {
     return Math.max(1, Math.ceil(this.cours.length / this.pageSize));
   }
 
-  // navigation pagination
   goToPage(p: number) {
     if (p < 1 || p > this.totalPages) return;
     this.currentPage = p;
@@ -98,7 +92,6 @@ newComment: { [id: number]: string } = {}; // les commentaires en cours de saisi
   prevPage() { this.goToPage(this.currentPage - 1); }
   nextPage() { this.goToPage(this.currentPage + 1); }
 
-  // remap titre/description selon langue (attend que backend expose titreFr/titreEn/descriptionFr/...)
   private remapForLang(list: any[], lang: string) {
     return list.map(c => {
       let title = '';
@@ -139,24 +132,19 @@ newComment: { [id: number]: string } = {}; // les commentaires en cours de saisi
     });
   }
 
-  // changer la langue (appelé par le header) ; remapOnly=true signifie "ne pas écrire localStorage"
   switchLang(language: string, remapOnly = false): void {
     const keys = ['en', 'fr', 'de', 'ar', 'es'] as const;
     const lang = keys.includes(language as any) ? language : 'fr';
     if (!remapOnly) localStorage.setItem('lang', lang);
     this.currentLang = this.texts[lang as keyof typeof this.texts];
 
-    // remapper si déjà chargé
     if (this.cours?.length) {
-      // remapForLang attend les noms originaux (titreFr, descriptionFr...). Si this.cours contient déjà title/description,
-      // on suppose que les champs originaux existent toujours dans l'objet (provenant du backend).
+
       this.cours = this.remapForLang(this.cours, lang);
-      // ajuste la page courante pour qu'elle reste valide
       this.currentPage = Math.min(this.currentPage, this.totalPages);
     }
   }
 
-  // helpers assets
   getImageSrc(imagePath: string | null): string {
     if (!imagePath) return 'assets/images/cour2.jpeg';
     return imagePath.startsWith('assets/') ? imagePath : `assets/${imagePath}`;
@@ -172,7 +160,6 @@ newComment: { [id: number]: string } = {}; // les commentaires en cours de saisi
     return videoPath.startsWith('assets/') ? videoPath : `assets/${videoPath}`;
   }
 
-  // download protégé par token
   download(id: number): void {
     const token = this.authService.getToken();
     if (!token) {
@@ -187,11 +174,9 @@ newComment: { [id: number]: string } = {}; // les commentaires en cours de saisi
       next: (data: any[]) => {
         console.log("✅ Cours chargés :", data);
   
-        // remap langue
         const lang = localStorage.getItem('lang') || 'fr';
         this.cours = this.remapForLang(data, lang);
   
-        // tri par date si dispo
         this.cours.sort((a, b) => {
           const ta = a.datePublication ? new Date(a.datePublication).getTime() : 0;
           const tb = b.datePublication ? new Date(b.datePublication).getTime() : 0;
@@ -265,13 +250,13 @@ newComment: { [id: number]: string } = {}; // les commentaires en cours de saisi
   
   loadComments(courId: number) {
     this.http.get<any[]>(`http://localhost:8080/api/cours/${courId}/comments`).subscribe(data => {
-      console.log(data); // afficher ou lier à la carte du cours
+      console.log(data); 
     });
   }
   
   loadLikes(courId: number) {
     this.http.get<any[]>(`http://localhost:8080/api/cours/${courId}/likes`).subscribe(data => {
-      console.log(data.length); // nombre de likes
+      console.log(data.length); 
     });
   }
   

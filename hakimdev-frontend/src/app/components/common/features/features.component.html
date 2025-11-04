@@ -1,64 +1,9 @@
-<!-- <div
-  class="features-area pt-100 pb-75 dotted-bg bg-fbecd7"
-  [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3' || router.url === '/index-4'}"
->
-  <div class="container">
-    <div class="section-title">
-      <span class="sub-title">{{ 'TOP FEATURES' | translate }}</span>
-      <section class="features-area">
-       
-          
-            <h2>{{ 'Best agencies choose their clients wisely' | translate }}</h2>
-            <p>{{ 'Les meilleures agences choisissent leurs clients judicieusement en se concentrant sur des partenaires qui partagent leurs valeurs, leur vision et leur culture, plutôt que de simplement chercher à augmenter leur chiffre d`affaires. Une sélection rigoureuse permet de construire des relations durables basées sur le respect mutuel, une communication transparente et une collaboration efficace, garantissant ainsi de meilleurs résultats pour toutes les parties concernées' | translate }}</p>
-         
-          
-        
-      </section>
-    </div>
 
-    <div class="row justify-content-center">
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="single-feature-box mb-25">
-          <div class="icon"><i class="flaticon-box"></i></div>
-          <h4><a routerLink="/service-details">{{ 'Product Engineering' | translate }}</a></h4>
-          <p>{{ 'Le "product engineering" (ingénierie produit) est une discipline qui applique des principes d`ingénierie pour le cycle de vie complet d`un produit, de sa conception initiale à son support post-lancement.' | translate }}</p>
-          <a routerLink="/service-details" class="link-btn">
-            {{ 'View_More' | translate }} <i class="flaticon-right-up"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="single-feature-box mb-25">
-          <div class="icon"><i class="flaticon-ux-design"></i></div>
-          <h4><a routerLink="/service-details">{{ 'UX/UI Design' | translate }}</a></h4>
-          <p>{{ 'L`UX/UI Design est une approche de conception de produits numériques visant à offrir la meilleure expérience utilisateur possible en combinant l`UX Design (expérience utilisateur) et l`UI Design (interface utilisateur).' | translate }}</p>
-          <a routerLink="/service-details" class="link-btn">
-            {{ 'View_More' | translate }} <i class="flaticon-right-up"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="single-feature-box mb-25">
-          <div class="icon"><i class="flaticon-data-analysis"></i></div>
-          <h4><a routerLink="/service-details">{{ 'Big Data & Analytics' | translate }}</a></h4>
-          <p>{{ 'Le Big Data & Analytics consiste à collecter, examiner, traiter et exploiter des ensembles massifs de données (volume, variété, vitesse) provenant de diverses sources pour en extraire des informations stratégiques.' | translate }}</p>
-          <a routerLink="/service-details" class="link-btn">
-            {{ 'View_More' | translate }} <i class="flaticon-right-up"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-<!-- Default Features Section -->
 <div
   class="features-area pt-100 pb-75 dotted-bg bg-fbecd7"
   [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3' || router.url === '/index-4'}"
 >
   <div class="container">
-    <!-- Titre haut -->
     <div class="section-title text-center">
       <span class="sub-title">{{ currentLang.subTitle }}</span>
       <br>
@@ -68,39 +13,50 @@
       <p>{{ currentLang.description }}</p>
     </div>
 
-    <!-- Cartes -->
     <div class="row justify-content-center">
       <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="single-feature-box mb-25">
           <div class="icon"><i class="flaticon-box"></i></div>
-          <h4><a routerLink="/service-details">{{ currentLang.card1Title }}</a></h4>
+          <h4>
+            <!-- <a routerLink="/service-details"> -->
+            {{ currentLang.card1Title }}
+          <!-- </a> -->
+        </h4>
         
           <p>{{ currentLang.card1Desc }}</p>
-          <a routerLink="/service-details" class="link-btn">
+          <!-- <a routerLink="/service-details" class="link-btn">
             {{ currentLang.viewMore }} <i class="flaticon-right-up"></i>
-          </a>
+          </a> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="single-feature-box mb-25">
           <div class="icon"><i class="flaticon-ux-design"></i></div>
-          <h4><a routerLink="/service-details">{{ currentLang.card2Title }}</a></h4>
+          <h4>
+            <!-- <a routerLink="/service-details"> -->
+              {{ currentLang.card2Title }}
+            <!-- </a> -->
+          </h4>
           <p>{{ currentLang.card2Desc }}</p>
-          <a routerLink="/service-details" class="link-btn">
+          <!-- <a routerLink="/service-details" class="link-btn">
             {{ currentLang.viewMore }} <i class="flaticon-right-up"></i>
-          </a>
+          </a> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="single-feature-box mb-25">
           <div class="icon"><i class="flaticon-data-analysis"></i></div>
-          <h4><a routerLink="/service-details">{{ currentLang.card3Title }}</a></h4>
+          <h4>
+            <!-- <a routerLink="/service-details"> -->
+            {{ currentLang.card3Title }}
+          <!-- </a> -->
+        </h4>
           <p>{{ currentLang.card3Desc }}</p>
-          <a routerLink="/service-details" class="link-btn">
+          <!-- <a routerLink="/service-details" class="link-btn">
             {{ currentLang.viewMore }} <i class="flaticon-right-up"></i>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>

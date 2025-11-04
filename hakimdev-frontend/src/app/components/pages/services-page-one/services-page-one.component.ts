@@ -144,7 +144,7 @@ export class ServicesPageOneComponent {
         {
           icon: 'flaticon-diagram-1',
           title: 'Branding web',
-          desc: 'Définir, développer et gérer l’identité visuelle et la réputation d’une entreprise en ligne.'
+          desc: 'Branding web: Définir, développer et gérer l’identité visuelle et la réputation d’une entreprise en ligne.'
         }
       ]
     },

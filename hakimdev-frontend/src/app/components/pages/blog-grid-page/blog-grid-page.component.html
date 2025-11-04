@@ -1,16 +1,4 @@
- <!-- <div class="content">
-              <div class="date">
-                {{ a.day }} <span>{{ a.month }}</span>
-              </div>
-              <h4>
-                <a routerLink="/blog-details">{{ a.title ||a.description || a.contenu || currentLang.defaultTitle }}</a>
-              </h4>
-              <p class="excerpt">{{ (a.description || a.contenu || currentLang.defaultExcerpt) | slice:0:100 }}…</p>
-              <a routerLink="/blog-details" class="link-btn">
-                {{ currentLang.readMore }} <i class="flaticon-right-up"></i>
-              </a>
-            </div> -->
-<!-- Page Banner -->
+
 <div class="page-banner-area dotted-bg bg-fbecd7">
     <div class="container">
       <div class="page-banner-content">
@@ -25,7 +13,6 @@
     <div class="shape2"><img src="assets/images/shape/shape2.png" alt="shape2" /></div>
   </div>
   
-  <!-- Blog Grid -->
   <div class="blog-area ptb-100 dotted-bg">
     <div *ngIf="!isLoggedIn" class="alert alert-warning text-center">
       <strong>⚠️ {{ currentLang.pageTitle }}</strong><br>
@@ -43,7 +30,6 @@
     
 
 
-  <!-- Articles dynamiques -->
 <div class="col-lg-4 col-md-6" *ngFor="let a of pagedArticles">
   <div class="single-blog-post mb-25">
     <a routerLink="/blog-details" class="image d-block">
@@ -76,7 +62,6 @@
   </div>
 </div>
 
-<!-- Pagination -->
 <nav class="pagination-area" *ngIf="totalPages > 1">
   <ul class="pagination">
     <li class="page-item" [class.disabled]="currentPage === 1">

@@ -1,84 +1,4 @@
-<!-- 
-<div
-    class="services-area ptb-100 dotted-bg"
-    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-4'}"
->
-    <div class="container">
-        <div class="section-title">
-            <span
-                class="sub-title"
-                [ngClass]="{'main-color': router.url === '/index-3'}"
-            >
-                {{ currentLang.subTitle }}
-            </span>
-            <h2>{{ currentLang.heading }}</h2>
-            <p>{{ currentLang.description }}</p>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="single-service-box mb-25">
-                    <div
-                        class="icon"
-                        [ngClass]="{'main-color': router.url === '/index-3'}"
-                    >
-                        <i class="flaticon-presentation"></i>
-                    </div>
-                    <h4><a routerLink="/service-details">{{ currentLang.strategyTitle }}</a></h4>
-                    <p>{{ currentLang.strategyDesc }}</p>
-                    <a routerLink="/service-details" class="link-btn">{{ currentLang.viewMore }} <i class="flaticon-right-up"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="single-service-box mb-25">
-                    <div
-                        class="icon"
-                        [ngClass]="{'main-color': router.url === '/index-3'}"
-                    >
-                        <i class="flaticon-web-programming"></i>
-                    </div>
-                    <h4><a routerLink="/service-details">{{ currentLang.webTitle }}</a></h4>
-                    <p>{{ currentLang.webDesc }}</p>
-                    <a routerLink="/service-details" class="link-btn">{{ currentLang.viewMore }} <i class="flaticon-right-up"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="single-service-box mb-25">
-                    <div
-                        class="icon"
-                        [ngClass]="{'main-color': router.url === '/index-3'}"
-                    >
-                        <i class="flaticon-content-management"></i>
-                    </div>
-                    <h4><a routerLink="/service-details">{{ currentLang.marketingTitle }}</a></h4>
-                    <p>{{ currentLang.marketingDesc }}</p>
-                    <a routerLink="/service-details" class="link-btn">{{ currentLang.viewMore }} <i class="flaticon-right-up"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="single-service-box mb-25">
-                    <div
-                        class="icon"
-                        [ngClass]="{'main-color': router.url === '/index-3'}"
-                    >
-                        <i class="flaticon-curve"></i>
-                    </div>
-                    <h4><a routerLink="/service-details">{{ currentLang.graphicsTitle }}</a></h4>
-                    <p>{{ currentLang.graphicsDesc }}</p>
-                    <a routerLink="/service-details" class="link-btn">{{ currentLang.viewMore }} <i class="flaticon-right-up"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="view-all-btn text-center">
-            <a routerLink="/services-2" class="default-btn">{{ currentLang.viewAll }} <i class="flaticon-right-up"></i></a>
-        </div>
-    </div>
-    <div class="shape3" [ngClass]="{'d-none': router.url === '/index-3'}">
-        <img src="assets/images/shape/shape3.png" alt="shape3">
-    </div>
-    <div class="shape4" [ngClass]="{'d-none': router.url === '/index-3'}">
-        <img src="assets/images/shape/shape4.png" alt="shape4">
-    </div>
-</div> -->
+
 <div
   class="services-area ptb-100 dotted-bg"
   [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-4'}"
@@ -98,7 +18,6 @@
     </div>
 
     <div class="row justify-content-center">
-      <!-- Business Strategy -->
       <div class="col-lg-6 col-md-6 col-sm-6">
         <div class="single-service-box mb-25">
           <div
@@ -107,13 +26,12 @@
           >
             <i class="flaticon-presentation"></i>
           </div>
-          <h4><a routerLink="/service-details">{{ currentLang.strategyTitle }}</a></h4>
+          <h4><a routerLink="/services">{{ currentLang.strategyTitle }}</a></h4>
           <p>{{ currentLang.strategyDesc }}</p>
-          <a routerLink="/service-details" class="link-btn">{{ currentLang.viewMore }} <i class="flaticon-right-up"></i></a>
+          <a routerLink="/services" class="link-btn">{{ currentLang.viewMore }} <i class="flaticon-right-up"></i></a>
         </div>
       </div>
 
-      <!-- Web Development -->
       <div class="col-lg-6 col-md-6 col-sm-6">
         <div class="single-service-box mb-25">
           <div
@@ -122,13 +40,12 @@
           >
             <i class="flaticon-web-programming"></i>
           </div>
-          <h4><a routerLink="/service-details">{{ currentLang.webTitle }}</a></h4>
+          <h4><a routerLink="/services">{{ currentLang.webTitle }}</a></h4>
           <p>{{ currentLang.webDesc }}</p>
-          <a routerLink="/service-details" class="link-btn">{{ currentLang.viewMore }} <i class="flaticon-right-up"></i></a>
+          <a routerLink="/services" class="link-btn">{{ currentLang.viewMore }} <i class="flaticon-right-up"></i></a>
         </div>
       </div>
 
-      <!-- Digital Marketing -->
       <div class="col-lg-6 col-md-6 col-sm-6">
         <div class="single-service-box mb-25">
           <div
@@ -137,13 +54,12 @@
           >
             <i class="flaticon-content-management"></i>
           </div>
-          <h4><a routerLink="/service-details">{{ currentLang.marketingTitle }}</a></h4>
+          <h4><a routerLink="/services">{{ currentLang.marketingTitle }}</a></h4>
           <p>{{ currentLang.marketingDesc }}</p>
-          <a routerLink="/service-details" class="link-btn">{{ currentLang.viewMore }} <i class="flaticon-right-up"></i></a>
+          <a routerLink="/services" class="link-btn">{{ currentLang.viewMore }} <i class="flaticon-right-up"></i></a>
         </div>
       </div>
 
-      <!-- Graphics Design -->
       <div class="col-lg-6 col-md-6 col-sm-6">
         <div class="single-service-box mb-25">
           <div
@@ -152,15 +68,15 @@
           >
             <i class="flaticon-curve"></i>
           </div>
-          <h4><a routerLink="/service-details">{{ currentLang.graphicsTitle }}</a></h4>
+          <h4><a routerLink="/services">{{ currentLang.graphicsTitle }}</a></h4>
           <p>{{ currentLang.graphicsDesc }}</p>
-          <a routerLink="/service-details" class="link-btn">{{ currentLang.viewMore }} <i class="flaticon-right-up"></i></a>
+          <a routerLink="/services" class="link-btn">{{ currentLang.viewMore }} <i class="flaticon-right-up"></i></a>
         </div>
       </div>
     </div>
 
     <div class="view-all-btn text-center">
-      <a routerLink="/services-2" class="default-btn">{{ currentLang.viewAll }} <i class="flaticon-right-up"></i></a>
+      <a routerLink="/services" class="default-btn">{{ currentLang.viewAll }} <i class="flaticon-right-up"></i></a>
     </div>
   </div>
 

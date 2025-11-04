@@ -9,14 +9,14 @@
   
     .media-container {
       display: flex;
-      gap: 12px; // ≈ 3mm
+      gap: 12px; 
       align-items: center;
   
       img,
       video {
         flex: 1;
-        height: 220px;       // même hauteur fixe
-        object-fit: cover;   // rogne proprement
+        height: 220px;       
+        object-fit: cover;   
         border-radius: 8px;
       }
     }
@@ -71,7 +71,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250px; /* Taille uniforme */
+    height: 250px; 
     overflow: hidden;
     background: #f9f9f9;
   }
@@ -119,7 +119,7 @@
   
   .excerpt {
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* 2 lignes max */
+    -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -143,7 +143,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9; /* ou 4 / 3 selon ton image */
+    aspect-ratio: 16 / 9; 
   }
   
   video.video-same {
@@ -323,7 +323,6 @@
     }
 }
 
-/* Max width 767px */
 @media only screen and (max-width : 767px) {
 
     .single-blog-post {
